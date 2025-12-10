@@ -1,0 +1,61 @@
+[
+    {
+        "id": "111",
+        "name": "Healthcare Delivery and Medical Resilience",
+        "description": "This category encompasses KVIs focused on the direct provision of medical care, patient outcomes, and the stability of healthcare systems. It highlights the use of 6G to improve access to care in remote areas, reduce healing times, empower medical staff, and ensure services continue during crises.",
+        "kvis": [
+            "IPH",
+            "IHA",
+            "RHT",
+            "EHP",
+            "RHD"
+        ]
+    },
+    {
+        "id": "112",
+        "name": "Occupational Health, Safety, and Industrial Efficiency",
+        "description": "This category groups KVIs related to the protection of the workforce and the optimization of industrial environments. It focuses on reducing physical load and injuries through robotics, exoskeletons, and remote operations (holo-portation), as well as efficient resource utilization in production facilities.",
+        "kvis": [
+            "IWSH",
+            "RIHW",
+            "WRIWB",
+            "NRDPF",
+            "BURH"
+        ]
+    },
+    {
+        "id": "113",
+        "name": "Public Safety Operations and Practitioner Empowerment",
+        "description": "This category addresses the capabilities of public safety organizations and the resulting security of the citizenry. It includes KVIs that measure how well safety tools support practitioner decision-making, ensure data security for critical missions, and improve the public's perception of safety.",
+        "kvis": [
+            "ATUT",
+            "CFS",
+            "GPC",
+            "IPAA",
+            "SMSN"
+        ]
+    },
+    {
+        "id": "114",
+        "name": "Emergency Response and Disaster Mitigation",
+        "description": "This category focuses specifically on crisis management and search-and-rescue operations. The KVIs here measure the speed of response to environmental or man-made incidents, the availability of critical communications during disasters, and the effectiveness of technology in saving lives in remote areas.",
+        "kvis": [
+            "IOESL",
+            "ICSA",
+            "FREI",
+            "INIM"
+        ]
+    },
+    {
+        "id": "115",
+        "name": "Societal Wellbeing: Nutrition, Mobility, and Ecology",
+        "description": "This category covers broader societal health and protection factors outside of clinical medicine and industrial work. It includes KVIs related to food security and nutrition, the reduction of traffic-related accidents and injuries, and the protection of wildlife.",
+        "kvis": [
+            "ICFS",
+            "ICPHN",
+            "NKWA",
+            "ARR",
+            "IUT"
+        ]
+    }
+]

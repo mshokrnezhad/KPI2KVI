@@ -1,0 +1,22 @@
+[
+    {
+        "id": "121",
+        "name": "System-Centric Architecture and Reliability",
+        "description": "This category encompasses KVIs that quantify trust through objective technical measures, architectural integrity, and service performance. It focuses on the implementation of Trust Functions (such as security, privacy, and resilience mechanisms), the mathematical calculation of trust levels via attestation and traceability, and the system's technical capability to maintain reliable service availability regardless of physical location. These indicators represent the 'hard' side of trust—ensuring the infrastructure works as claimed.",
+        "kvis": [
+            "LoT",
+            "LoT",
+            "APSS"
+        ]
+    },
+    {
+        "id": "122",
+        "name": "User Perception, Social Interaction, and Governance",
+        "description": "This category groups KVIs related to the subjective, human-centric, and societal aspects of trust. It includes the measurement of user confidence (subjective feedback) in devices and AI algorithms, the enhancement of interpersonal trust between humans through immersive technologies (such as holographic facial visualization), and the broader societal trust in system governance and other users. These indicators focus on the 'soft' side of trust—how users feel about and interact with the system and each other.",
+        "kvis": [
+            "RC",
+            "FRV",
+            "UT"
+        ]
+    }
+]

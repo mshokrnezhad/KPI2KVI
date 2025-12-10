@@ -1,0 +1,30 @@
+[
+    {
+        "id": "091",
+        "name": "Social Equity and Community Inclusion",
+        "description": "This category focuses on the sociological and human-centric outcomes of digital connectivity. These indicators measure the reduction of the digital divide, ensuring that under-served, under-represented, and mainstream populations alike have equitable access to digital opportunities. The primary goal is to foster community prosperity and ensure no demographic is left behind.",
+        "kvis": [
+            "DI",
+            "SDI",
+            "AWE-CP"
+        ]
+    },
+    {
+        "id": "092",
+        "name": "Device Accessibility and Human-Machine Interaction",
+        "description": "This category groups indicators related to the tangible entry points of the digital world: the hardware and the user interfaces. It emphasizes the affordability of devices (budget-friendly HW), the ease of use for general populations, and specific accessibility features (such as VR UI or voice interaction) designed to assist users with disabilities or limitations in navigating environments like Digital Twins.",
+        "kvis": [
+            "EAH-DI",
+            "MFO-DT"
+        ]
+    },
+    {
+        "id": "093",
+        "name": "Network Coverage and Service Scalability",
+        "description": "This category pertains to the technical infrastructure and service delivery mechanisms required to enable inclusion. It covers the physical expansion of network footprints to connect remote and unconnected populations (coverage), as well as the architectural improvements (APIs, IoT hyperscaling) necessary to serve a larger volume of users without compromising service quality.",
+        "kvis": [
+            "MUB-SQ",
+            "ICF"
+        ]
+    }
+]

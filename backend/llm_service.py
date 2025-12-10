@@ -1,10 +1,8 @@
 import logging
-from typing import Optional
+import os
+from typing import Any, Optional
 
-from openai import AsyncOpenAI
 from pydantic_ai import Agent
-from pydantic_ai.models.openai import OpenAIModel
-from pydantic_ai.providers.openrouter import OpenRouterProvider
 
 from .config import AgentConfig, Settings
 
@@ -16,41 +14,51 @@ class LLMAgent:
         self,
         config: AgentConfig,
         settings: Settings,
-        logger: Optional[logging.Logger] = None
+        logger: Optional[logging.Logger] = None,
+        result_type: Optional[type] = None
     ):
         self.config = config
         self.settings = settings
         self.logger = logger or logging.getLogger(__name__)
+        self.result_type = result_type
 
-        # Create OpenRouter provider with custom client
-        client = AsyncOpenAI(
-            api_key=settings.openrouter_api_key,
-            base_url=settings.openrouter_base_url,
-            timeout=120.0,
-        )
-        provider = OpenRouterProvider(
-            api_key=settings.openrouter_api_key,
-            openai_client=client,
-        )
+        # In pydantic-ai 0.0.19, configure OpenAI-compatible API via environment variables
+        # Set environment variables for OpenRouter
+        os.environ['OPENAI_API_KEY'] = settings.openrouter_api_key
+        os.environ['OPENAI_BASE_URL'] = settings.openrouter_base_url
         
-        # Initialize the agent
-        model = OpenAIModel(
-            model_name=config.model,
-            provider=provider,
-        )
-        self.agent = Agent(model=model, system_prompt=config.system_prompt)
+        # Use model string with openai: prefix for OpenAI-compatible APIs
+        model_str = f"openai:{config.model}"
+        
+        # Create agent with result_type if specified for structured output
+        # In pydantic-ai 0.0.19, result_type is a constructor parameter
+        if result_type:
+            self.agent = Agent(
+                model_str,
+                result_type=result_type,
+                system_prompt=config.system_prompt
+            )
+        else:
+            self.agent = Agent(model_str, system_prompt=config.system_prompt)
         
         self.logger.info(
             f"Initialized agent: {config.name}",
-            extra={"agent": config.name, "model": config.model}
+            extra={"agent": config.name, "model": config.model, "structured_output": result_type is not None}
         )
 
-    async def run(self, prompt: str) -> str:
+    async def run(self, prompt: str) -> str | Any:
         """Run the agent with the given prompt and return the response."""
-        result = await self.agent.run(prompt)
-        # PydanticAI's AgentRunResult has an 'output' attribute containing the actual message
-        response_text = str(result.output)
-        return response_text
+        # If result_type is specified, agent was created with structured output
+        if self.result_type:
+            self.logger.info(f"Agent {self.config.name} using structured output with result_type: {self.result_type.__name__}")
+            result = await self.agent.run(prompt)
+            # In pydantic-ai 0.0.19, structured output is in result.data
+            self.logger.info(f"Structured output received, type: {type(result.data).__name__}")
+            return result.data
+        else:
+            result = await self.agent.run(prompt)
+            # Plain text output is also in result.data
+            return str(result.data)
 
     @property
     def name(self) -> str:

@@ -1,0 +1,18 @@
+[
+    {
+        "id": "051",
+        "name": "Advanced Digital Entertainment",
+        "description": "This category focuses on the expansion and technological enhancement of digital leisure sectors. It specifically tracks the growth of immersive experiences, such as thematic and cloud-rendered gaming, identifying them as key drivers for modern cultural interaction and service consumption.",
+        "kvis": [
+            "INTG"
+        ]
+    },
+    {
+        "id": "052",
+        "name": "Digital Inclusion and Societal Participation",
+        "description": "This category encompasses indicators dedicated to the democratization of technology. It measures the effectiveness of network services (such as 5G) in bridging the digital divide, ensuring that all individuals have the necessary access and ability to actively engage with the cultural and social elements of their communities.",
+        "kvis": [
+            "TAHAP"
+        ]
+    }
+]

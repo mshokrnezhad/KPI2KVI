@@ -1,0 +1,101 @@
+[
+    {
+        "id": "031",
+        "name": "Smart Agriculture: Financial Performance",
+        "description": "This category focuses on the direct financial benefits realized in the agricultural sector through 6G technologies. It encompasses indicators that measure monetary gains derived from reduced operational costs, increased profit margins from efficient management, and overall revenue growth driven by market expansion and higher product quality.",
+        "kvis": [
+            "ICSAA",
+            "IP-A",
+            "RG"
+        ]
+    },
+    {
+        "id": "032",
+        "name": "Smart Agriculture: Operational & Resource Efficiency",
+        "description": "This category covers the physical and process-oriented improvements in farming. It groups indicators related to optimizing natural resource usage (such as water and soil), increasing physical crop yields and productivity through real-time monitoring, and streamlining general farming operations via automation.",
+        "kvis": [
+            "IPAA",
+            "IOEA",
+            "RUO"
+        ]
+    },
+    {
+        "id": "033",
+        "name": "Healthcare Service Optimization & Development",
+        "description": "This category evaluates the economic and efficiency impact of 6G on the healthcare sector. It includes metrics regarding cost and time savings for patients and hospitals, improvements in operational workflows for medical services, and the broader economic development of remote areas through accessible health services.",
+        "kvis": [
+            "OCS-H",
+            "TS-H",
+            "OE-H",
+            "ED"
+        ]
+    },
+    {
+        "id": "034",
+        "name": "AI-Native Radio & Spectral Efficiency",
+        "description": "This category groups technical indicators focused on reducing Capital Expenditures (CAPEX) through Artificial Intelligence and Machine Learning enhancements. It specifically looks at how improved spectral efficiency, neural receivers, and optimized beam management reduce the need for costly spectrum acquisition and physical infrastructure densification.",
+        "kvis": [
+            "CR-CSI",
+            "CR-MIMO",
+            "CR-NR",
+            "CR-BM"
+        ]
+    },
+    {
+        "id": "035",
+        "name": "Network Operational Agility & Process Automation",
+        "description": "This category focuses on Operational Expenditure (OPEX) reductions and efficiency within the network core and management layers. It includes KVIs related to automated protocol generation, in-context learning to reduce computational complexity, capacity compression techniques, and intelligent resource selection to minimize running costs.",
+        "kvis": [
+            "OR-ICL",
+            "OR-DCI",
+            "CR-PRO",
+            "CE-O"
+        ]
+    },
+    {
+        "id": "036",
+        "name": "Infrastructure Integration & TCO Reduction",
+        "description": "This category addresses structural cost reductions in network deployment and lifecycle management. It includes indicators for minimizing CAPEX by integrating sensing and communication (reducing device count), virtualized RAN efficiencies, and lowering the Total Cost of Ownership (TCO) for both operators and service providers.",
+        "kvis": [
+            "CR-JSAC",
+            "RC-O",
+            "RTCO-S",
+            "RTCO-EE"
+        ]
+    },
+    {
+        "id": "037",
+        "name": "Connected Mobility & Fleet Economics",
+        "description": "This category is dedicated to the automotive and transport sector (Project ENVELOPE). It consolidates metrics measuring reductions in vehicle CAPEX and OPEX, improvements in fleet productivity, and the acceleration of Time-to-Market for new connected mobility solutions.",
+        "kvis": [
+            "OCS-E",
+            "CR-E",
+            "TTMR",
+            "OR-E",
+            "IP-E"
+        ]
+    },
+    {
+        "id": "038",
+        "name": "Industrial Digitalization & Production Value",
+        "description": "This category covers the economic impact of 6G on manufacturing and industrial environments. It includes KVIs related to the increased utilization of robotics, productivity gains in factory work, digital twin adoption, and supply chain optimizations facilitated by extended reality (XR) and low-latency services.",
+        "kvis": [
+            "IURI",
+            "IPFW",
+            "OII",
+            "EIP"
+        ]
+    },
+    {
+        "id": "039",
+        "name": "Business Evolution, Access & Societal Impact",
+        "description": "This category captures high-level economic and societal indicators. It includes the creation of new business values, broad economic growth, the democratization of access to technology, the ability to support new functionalities, and cost savings related to substituting physical travel with holographic communications.",
+        "kvis": [
+            "BV",
+            "EG",
+            "PAPI",
+            "ASAF",
+            "CST"
+        ]
+    }
+]

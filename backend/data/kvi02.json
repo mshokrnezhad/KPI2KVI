@@ -1,0 +1,35 @@
+[
+    {
+        "id": "021",
+        "name": "Health, Safety, and Critical Response Optimization",
+        "description": "This category encompasses KVIs that directly impact the physical and mental well-being of citizens and workers. It focuses on minimizing health risks (such as radiation and work-related injuries), reducing psychological stress in daily activities like mobility, and optimizing the speed and efficiency of critical emergency operations. These indicators measure how 6G technologies protect human life and health in both routine and crisis scenarios.",
+        "kvis": [
+            "EAN",
+            "RERT",
+            "IOE",
+            "CCWI",
+            "LSM"
+        ]
+    },
+    {
+        "id": "022",
+        "name": "Digital Inclusion, Accessibility, and Remote Equity",
+        "description": "This category focuses on democratization and equality. It groups KVIs that aim to bridge the digital divide by reducing regional disparities (rural vs. urban), lowering barriers to entry for advanced technologies (cost and hardware access), and enabling diverse populations—including those with lower skill levels or disabilities—to participate in the workforce and society through XR and remote collaboration tools.",
+        "kvis": [
+            "EOAHC",
+            "DAFP",
+            "RCES",
+            "MPET"
+        ]
+    },
+    {
+        "id": "023",
+        "name": "Trust, Ethics, and Service Adoption",
+        "description": "This category addresses the governance and social acceptance aspects of technology. It includes KVIs that measure adherence to ethical standards in manufacturing and sociology, the level of public trust required to adopt automated systems (such as CCAM), and the expansion of service reach to a wider user base. These indicators ensure that technological advancement aligns with societal values and achieves broad public acceptance.",
+        "kvis": [
+            "EAEP",
+            "TIC",
+            "IU"
+        ]
+    }
+]

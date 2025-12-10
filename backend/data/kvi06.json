@@ -1,0 +1,35 @@
+[
+    {
+        "id": "061",
+        "name": "Vertical Sector Transformation and Societal Well-being",
+        "description": "This category encompasses KVIs that measure the direct impact of 6G technologies on specific vertical industries—specifically Agriculture and Healthcare—and the resulting benefits to human welfare. It focuses on the practical application of technology to solve real-world problems, such as modernizing farming practices through knowledge transfer or improving patient care. Indicators here track the enhancement of quality of life, the reduction of burdens on chronic patients (eHealth), digital leadership in home care devices, and the adoption of advanced irrigation tools by local farmers.",
+        "kvis": [
+            "IPAS",
+            "IP6GAS",
+            "DL",
+            "EQL",
+            "SU"
+        ]
+    },
+    {
+        "id": "062",
+        "name": "Immersive Education and Skill Acquisition",
+        "description": "This category aggregates KVIs related to the generation, dissemination, and retention of knowledge through next-generation media (XR, Holograms). It evaluates the effectiveness and availability of educational content and training methodologies. The focus is on the quantity of immersive products available (educational and cultural), the ability to conduct remote live lectures or virtual visits, and the specific metrics regarding rapid skills acquisition and know-how retention within organizations.",
+        "kvis": [
+            "IALL",
+            "ETA",
+            "IIECP",
+            "IIEP"
+        ]
+    },
+    {
+        "id": "063",
+        "name": "Accessibility, Hardware, and Community Engagement",
+        "description": "This category focuses on the enablers of knowledge transfer: the physical access to technology and the social dynamics of usage. It measures the barriers to entry and the breadth of adoption. This includes the usability and availability of necessary hardware (smartphones, holographic gear), the geographic or population coverage of these services, and the active participation of the local community in generating ideas and utilizing applications for cultural exchange.",
+        "kvis": [
+            "EUAH",
+            "MPI",
+            "IIA"
+        ]
+    }
+]

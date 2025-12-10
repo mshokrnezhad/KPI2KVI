@@ -43,17 +43,34 @@ class AgentRegistry:
                 
                 agent_name = module.AGENT_NAME
                 
+                # Get optional response format
+                response_format = getattr(module, "RESPONSE_FORMAT", None)
+                
                 # Create agent configuration
                 from .config import AgentConfig
                 config = AgentConfig(
                     name=agent_name,
                     system_prompt=module.SYSTEM_PROMPT,
                     model=module.MODEL,
-                    description=module.DESCRIPTION
+                    description=module.DESCRIPTION,
+                    response_format=response_format
                 )
                 
+                # If response format is specified, get the Pydantic model
+                result_type = None
+                if response_format:
+                    from . import schemas
+                    result_type = getattr(schemas, response_format, None)
+                    if not result_type:
+                        self.logger.warning(f"Response format {response_format} not found in schemas")
+                
                 # Create and register the agent
-                agent = LLMAgent(config=config, settings=self.settings, logger=self.logger)
+                agent = LLMAgent(
+                    config=config,
+                    settings=self.settings,
+                    logger=self.logger,
+                    result_type=result_type
+                )
                 self.agents[agent_name] = agent
                 self.agent_modules[agent_name] = module
                 

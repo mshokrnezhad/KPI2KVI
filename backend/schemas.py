@@ -15,3 +15,18 @@ class ChatResponse(BaseModel):
     session_id: str
     reply: str
     history: List[ChatMessage]
+
+
+class KVICategoryItem(BaseModel):
+    """Represents a single KVI category selection."""
+    main_id: str = Field(..., description="ID of the main category (e.g., '01', '02')")
+    sub_id: str = Field(..., description="ID of the subcategory (e.g., '011', '021')")
+
+
+class KVICategoryResponse(BaseModel):
+    """Response containing relevant KVI categories based on interview."""
+    categories: List[KVICategoryItem] = Field(
+        ..., 
+        description="List of relevant KVI categories (max 10)",
+        max_length=10
+    )

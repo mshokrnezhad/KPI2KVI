@@ -1,0 +1,21 @@
+[
+    {
+        "id": "041",
+        "name": "Global Service Scalability and Network Enablers",
+        "description": "This category encompasses the technical and architectural advancements required to 'democratize' access to high-performance networks. It focuses on expanding the service footprint (such as gaming and IoT), improving network intelligence, and utilizing cloud-native protocols to ensure that a broader population of users can be served with high quality, regardless of their location or domain. It aggregates KVIs that deal with the backend infrastructure (SCP, In-band intelligence) and the direct result of that infrastructure (increased user capacity and service reach).",
+        "kvis": [
+            "IFGS",
+            "MUS",
+            "DII",
+            "CNISCP"
+        ]
+    },
+    {
+        "id": "042",
+        "name": "Digital Inclusivity and Human-Centric Accessibility",
+        "description": "This category addresses the 'fairness' aspect of democracy within the digital space. It focuses on the user interface and interaction layer, specifically ensuring that advanced technologies (such as Digital Twins and XR) remain accessible to individuals with potential limitations or disabilities. The focus is on removing physical barriers to entry through adaptive interfaces (e.g., voice interaction) to guarantee equal opportunity for participation in the digital economy.",
+        "kvis": [
+            "MFO"
+        ]
+    }
+]

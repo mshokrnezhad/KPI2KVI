@@ -1,0 +1,23 @@
+[
+    {
+        "id": "071",
+        "name": "Technical Infrastructure Security & Resilience",
+        "description": "This category encompasses KVIs that measure the objective technical capabilities, operational robustness, and specific implementation mechanisms of the network and associated digital environments. It focuses on the system's ability to withstand threats through resilience, active resource monitoring, intrusion detection, and the deployment of specific privacy-preserving technologies (such as encryption and edge-cloud security) within complex environments like 3D Digital Twins.",
+        "kvis": [
+            "SEC",
+            "OSI",
+            "MEPS-3DDT"
+        ]
+    },
+    {
+        "id": "072",
+        "name": "User Trust, Perception, & Requirement Compliance",
+        "description": "This category groups KVIs that focus on the human-centric and procedural aspects of security and privacy. It evaluates the subjective trust users place in the system (perceived security and sustainability confidence) and measures the project's governance effectiveness in responding to and resolving specific user-raised concerns regarding privacy and security needs.",
+        "kvis": [
+            "RCS-DDSS",
+            "RPS-DDSS",
+            "PUC-USCA",
+            "PUC-UPCA"
+        ]
+    }
+]

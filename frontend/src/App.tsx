@@ -248,7 +248,7 @@ function App() {
               exit={{ opacity: 0 }}
               className="absolute inset-0 flex flex-col justify-between overflow-hidden"
             >
-              <div className="flex-1 overflow-y-auto w-full max-w-3xl mx-auto p-4 pt-20 scrollbar-hide">
+              <div className="flex-1 overflow-y-auto w-full max-w-3xl mx-auto p-4 pt-20 pb-40 scrollbar-hide">
                 {messages.map((msg) => (
                   <div key={msg.id} className={`mb-6 flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
                     <div className={`flex gap-4 max-w-[80%] ${msg.sender === 'user' ? 'flex-row-reverse' : 'flex-row'}`}>
@@ -391,7 +391,7 @@ function App() {
         </AnimatePresence>
 
         {/* Input Area - Shared Layout Animation */}
-        <div className="absolute bottom-0 left-0 right-0 w-full p-4">
+        <div className="absolute bottom-0 left-0 right-0 w-full p-4 bg-gradient-to-t from-[#212121] via-[#212121] to-transparent pt-8">
           <motion.div
             layoutId="input-container"
             className={`relative mx-auto bg-[#2f2f2f] rounded-3xl border border-gray-600 shadow-lg overflow-hidden ${hasStarted ? 'max-w-3xl' : 'max-w-2xl'}`}
@@ -409,14 +409,9 @@ function App() {
                     : "Backend unavailable. Please check connection."
               }
               disabled={healthStatus !== 'ok'}
-              className={`w-full bg-transparent border-none outline-none text-white p-4 pr-12 resize-none max-h-52 min-h-[56px] ${healthStatus !== 'ok' ? 'opacity-50 cursor-not-allowed' : ''}`}
+              className={`w-full bg-transparent border-none outline-none text-white p-4 pr-12 resize-none ${healthStatus !== 'ok' ? 'opacity-50 cursor-not-allowed' : ''}`}
               rows={1}
-              style={{ height: 'auto', minHeight: '56px' }}
-              onInput={(e) => {
-                const target = e.target as HTMLTextAreaElement;
-                target.style.height = 'auto';
-                target.style.height = `${Math.min(target.scrollHeight, 200)}px`;
-              }}
+              style={{ height: '56px' }}
             />
             <div className="absolute bottom-3 right-3">
               <button

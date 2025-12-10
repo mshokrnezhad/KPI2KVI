@@ -1,0 +1,109 @@
+[
+  {
+    "id": "011",
+    "name": "Smart Agriculture & Ecosystem Preservation",
+    "description": "This category encompasses KVIs focused on the application of 6G technologies to the natural biosphere. It includes precision farming techniques to reduce water and energy inputs, soil health monitoring, and the protection of natural habitats to enhance climate resilience.",
+    "kvis": [
+      "IWCA",
+      "IEEA",
+      "ISHM",
+      "ICCR",
+      "IAPH"
+    ]
+  },
+  {
+    "id": "012",
+    "name": "Circular Economy & Hardware Lifecycle",
+    "description": "These KVIs address the physical environmental impact of the technology hardware itself. The focus is on reducing solid waste (packaging and electronics), extending the lifespan of devices, and minimizing the disposal of hazardous materials like batteries through offloading processing power.",
+    "kvis": [
+      "WR-H",
+      "WR-E",
+      "NEB",
+      "ILPS"
+    ]
+  },
+  {
+    "id": "013",
+    "name": "Decarbonization via Travel Substitution",
+    "description": "This category tracks the reduction of Carbon Dioxide (CO2) and Greenhouse Gas (GHG) emissions achieved by replacing physical movement with digital alternatives. It measures the effectiveness of holographic meetings, digital twins, and route optimization in lowering the carbon footprint associated with transportation.",
+    "kvis": [
+      "RTAE",
+      "MRCF",
+      "ARGHG",
+      "CFR",
+      "TTE"
+    ]
+  },
+  {
+    "id": "014",
+    "name": "Intelligent Network Control & Semantics",
+    "description": "These KVIs focus on the \"brain\" of the network—the high-level algorithmic and AI-driven decisions that optimize energy usage. This includes semantic communication (reducing data volume by understanding meaning), confidence prediction, and intelligent clustering of access points.",
+    "kvis": [
+      "EEI-MPC",
+      "EEI-JSAC",
+      "EEI-Sem",
+      "EEI-Conf",
+      "EEI-CF"
+    ]
+  },
+  {
+    "id": "015",
+    "name": "Physical Layer & Signal Efficiency",
+    "description": "This category groups KVIs related to the optimization of the radio \"signal\" and transmission parameters. It covers low-level technical improvements such as compressing Channel State Information (CSI), optimizing beamforming, and adapting modulation schemes to reduce the raw energy required for transmission.",
+    "kvis": [
+      "EEI-CSI",
+      "EEI-MIMO",
+      "EEI-Beam",
+      "EEI-Mod",
+      "EEI-DCI"
+    ]
+  },
+  {
+    "id": "016",
+    "name": "Computational & Traffic Resource Allocation",
+    "description": "These KVIs measure the efficiency of how network resources (computing power and spectrum) are scheduled and utilized. The focus is on preventing energy waste through better subband selection, efficient cloud/edge computing distribution, and traffic flow management.",
+    "kvis": [
+      "EEI-Sub",
+      "EE-CCL",
+      "REC",
+      "RUO",
+      "EEI-E"
+    ]
+  },
+  {
+    "id": "017",
+    "name": "Holistic Service Footprint Optimization",
+    "description": "This category looks at the aggregate environmental footprint of specific services or urban environments. Unlike component-level metrics, these KVIs assess the total energy and resource impact of a service (like urban transport or general network coverage) to ensure sustainability at the service level.",
+    "kvis": [
+      "OEMF",
+      "OEF",
+      "OEF-ECO",
+      "RF-ER",
+      "EFUT"
+    ]
+  },
+  {
+    "id": "018",
+    "name": "Environmental Governance & Awareness",
+    "description": "These KVIs focus on the human and regulatory side of sustainability. They track compliance with environmental laws, the capability of frameworks to share energy data among stakeholders, and the general increase in awareness regarding environmental challenges.",
+    "kvis": [
+      "ERC-W",
+      "ERC-P",
+      "MFS",
+      "MEUP",
+      "GUEC"
+    ]
+  },
+  {
+    "id": "019",
+    "name": "Operational Efficiency & Measurement Precision",
+    "description": "This category groups KVIs related to the quantification of operational performance. It includes the accuracy of energy measurements, the real-time cost of electricity, and the optimization of general operational resources (supply chain, personnel) to maximize efficiency.",
+    "kvis": [
+      "EC-E",
+      "IEE-M",
+      "EPCC",
+      "QLP",
+      "ROPT"
+    ]
+  }
+]

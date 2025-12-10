@@ -1,0 +1,61 @@
+{
+    "input_image": "uploaded_image",
+    "task": {
+        "primary_goal": "Identify the most similar globally famous fictional character to the person/character in the uploaded image.",
+        "subtasks": [
+            "Analyze the look, style, and vibe of the uploaded character.",
+            "Select a single, highly recognizable fictional character from popular media (cartoon, comic, anime, film, TV, or video game) who best matches.",
+            "Generate a high-quality composite image showing the famous character standing next to the original character in a selfie pose."
+        ]
+    },
+    "generation": {
+        "scene": {
+            "composition": {
+                "framing": "Medium-close selfie (head and shoulders), both subjects in frame, one character holding an invisible camera (partial arm visible).",
+                "expressions": "Both characters smiling or matching the original expression for a candid, friendly appearance.",
+                "pose": "Characters lean in towards each other naturally."
+            },
+            "character_treatment": {
+                "original_character": {
+                    "preserve": [
+                        "face",
+                        "expression",
+                        "outfit",
+                        "skin_tone",
+                        "pose",
+                        "all accessories"
+                    ],
+                    "notes": "No alteration, treat as real subject."
+                },
+                "famous_character": {
+                    "selection_criteria": [
+                        "Best match for look or vibe from major pop culture",
+                        "If multiple matches, pick the single most globally iconic",
+                        "If uploaded image closely resembles a copyrighted character, choose a different but iconic character in that genre"
+                    ],
+                    "visual_style": "Faithful to iconic appearance (costume, silhouette, key facial features), but harmonized in detail/style to match original photo."
+                }
+            },
+            "integration": {
+                "visual_consistency": [
+                    "Lighting, color temperature, and perspective matched to photo",
+                    "Naturalistic compositing (shadows, highlights, accurate depth-of-field)",
+                    "Background: original retained, slightly softened for focus, no added text/logos"
+                ]
+            },
+            "quality": {
+                "resolution": "High",
+                "style": "Photo-blended or photorealistic as appropriate to uploaded image",
+                "details": [
+                    "Natural skin textures",
+                    "Realistic fabric and material render"
+                ],
+                "respect": "No sexualized, violent, political, or hateful content. Friendly only."
+            }
+        }
+    },
+    "output": {
+        "format": "PNG",
+        "requirement": "A single final image (PNG) showing the original person/character taking a selfie with one famous fictional character."
+    }
+}

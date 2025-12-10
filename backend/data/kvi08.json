@@ -1,0 +1,71 @@
+[
+    {
+        "id": "081",
+        "name": "User Experience and Subjective Satisfaction",
+        "description": "This category focuses on the human-centric evaluation of 6G services. It encompasses the qualitative feedback from users regarding their personal interactions with the technology. The KVIs in this group measure how easy, enjoyable, and useful the technology feels to the end-user, utilizing methodologies such as Likert scales and structural equation modeling to quantify perceived quality in both professional (agricultural) and leisure (venue/home) settings.",
+        "kvis": [
+            "IUS",
+            "IEOU",
+            "PUAE",
+            "PEEEQV",
+            "PEEEQH"
+        ]
+    },
+    {
+        "id": "082",
+        "name": "Network Reliability, Trust, and Stability",
+        "description": "This category aggregates KVIs that measure the foundational dependability of the 6G infrastructure. It emphasizes the technical robustness required to build user confidence. These indicators track the consistency of network connections, the accuracy of transmitted data, the stability of smart systems, and the security of nomadic networks, all of which are prerequisites for a 'simplified life' free from technical disruptions.",
+        "kvis": [
+            "INR",
+            "IDR",
+            "IT",
+            "RAS",
+            "TA"
+        ]
+    },
+    {
+        "id": "083",
+        "name": "Time Optimization and Virtualization",
+        "description": "This category highlights the direct impact of 6G on personal and professional efficiency, specifically through the reduction of physical travel and the acceleration of tasks. These KVIs measure the tangible time savings achieved through agricultural efficiency, holographic meetings, and immersive communication tools. The focus is on how virtualization allows users to reclaim time, thereby improving work-life balance and communication effectiveness.",
+        "kvis": [
+            "ITSAA",
+            "VMST",
+            "RTIE",
+            "ICE"
+        ]
+    },
+    {
+        "id": "084",
+        "name": "System Adaptability and Scalable Architecture",
+        "description": "This category focuses on the technical agility of the 6G systems. It groups KVIs that measure how well the infrastructure responds to changing variables, such as varying weather conditions, increasing data volumes, or evolving use-case requirements. These indicators ensure that the technology remains 'simple' for the user by automatically handling complexity, scaling resources, and reconfiguring processes without losing functionality.",
+        "kvis": [
+            "ISS",
+            "ATC",
+            "FANR",
+            "ORA",
+            "PCCR"
+        ]
+    },
+    {
+        "id": "085",
+        "name": "Operational Integration and Data Utility",
+        "description": "This category addresses the practical application of 6G in daily workflows and decision-making loops. It includes KVIs that measure how different hardware components (drones, AGVs) integrate seamlessly, how easily users can access real-time data, and how that data translates into faster operational decisions. It also tracks the actual utilization rates of applications, reflecting the practical utility of the system.",
+        "kvis": [
+            "SI",
+            "IOE",
+            "IDA",
+            "RTIE2"
+        ]
+    },
+    {
+        "id": "086",
+        "name": "Service Accessibility and Lifestyle Enhancement",
+        "description": "This category captures the broader societal and lifestyle benefits enabled by 6G coverage. It focuses on the availability of services—ranging from food security and local market stability to entertainment and cultural events. These KVIs measure the expansion of service coverage to new populations and the enrichment of daily life through in-home entertainment and immersive event participation.",
+        "kvis": [
+            "FSA",
+            "IOIHE",
+            "IIES",
+            "IAHA"
+        ]
+    }
+]

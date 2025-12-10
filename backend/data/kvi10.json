@@ -1,0 +1,10 @@
+[
+    {
+        "id": "101",
+        "name": "Immersive Social Inclusion & Accessibility",
+        "description": "This category focuses on leveraging advanced XR and 6G technologies to bridge physical, biological, and geographic divides. It groups indicators that measure the effectiveness of digital solutions—such as holographic communication and adaptive SDKs—in providing equitable access to social and professional interactions. The primary goal is to quantify the reduction of barriers for individuals with disabilities or those located in remote regions, ensuring they can participate fully in the digital ecosystem without physical travel.",
+        "kvis": [
+            "IAPD"
+        ]
+    }
+]
