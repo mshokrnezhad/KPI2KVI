@@ -1,309 +1,1100 @@
 [
-    {
-        "id": "01",
-        "name": "Environmental Sustainability",
-        "categories": [
-            {
-                "id": "011",
-                "name": "Smart Agriculture & Ecosystem Preservation",
-                "description": "This category encompasses KVIs focused on the application of 6G technologies to the natural biosphere. It includes precision farming techniques to reduce water and energy inputs, soil health monitoring, and the protection of natural habitats to enhance climate resilience."
-            },
-            {
-                "id": "012",
-                "name": "Circular Economy & Hardware Lifecycle",
-                "description": "These KVIs address the physical environmental impact of the technology hardware itself. The focus is on reducing solid waste (packaging and electronics), extending the lifespan of devices, and minimizing the disposal of hazardous materials like batteries through offloading processing power."
-            },
-            {
-                "id": "013",
-                "name": "Decarbonization via Travel Substitution",
-                "description": "This category tracks the reduction of Carbon Dioxide (CO2) and Greenhouse Gas (GHG) emissions achieved by replacing physical movement with digital alternatives. It measures the effectiveness of holographic meetings, digital twins, and route optimization in lowering the carbon footprint associated with transportation."
-            },
-            {
-                "id": "014",
-                "name": "Intelligent Network Control & Semantics",
-                "description": "These KVIs focus on the \"brain\" of the network—the high-level algorithmic and AI-driven decisions that optimize energy usage. This includes semantic communication (reducing data volume by understanding meaning), confidence prediction, and intelligent clustering of access points."
-            },
-            {
-                "id": "015",
-                "name": "Physical Layer & Signal Efficiency",
-                "description": "This category groups KVIs related to the optimization of the radio \"signal\" and transmission parameters. It covers low-level technical improvements such as compressing Channel State Information (CSI), optimizing beamforming, and adapting modulation schemes to reduce the raw energy required for transmission."
-            },
-            {
-                "id": "016",
-                "name": "Computational & Traffic Resource Allocation",
-                "description": "These KVIs measure the efficiency of how network resources (computing power and spectrum) are scheduled and utilized. The focus is on preventing energy waste through better subband selection, efficient cloud/edge computing distribution, and traffic flow management."
-            },
-            {
-                "id": "017",
-                "name": "Holistic Service Footprint Optimization",
-                "description": "This category looks at the aggregate environmental footprint of specific services or urban environments. Unlike component-level metrics, these KVIs assess the total energy and resource impact of a service (like urban transport or general network coverage) to ensure sustainability at the service level."
-            },
-            {
-                "id": "018",
-                "name": "Environmental Governance & Awareness",
-                "description": "These KVIs focus on the human and regulatory side of sustainability. They track compliance with environmental laws, the capability of frameworks to share energy data among stakeholders, and the general increase in awareness regarding environmental challenges."
-            },
-            {
-                "id": "019",
-                "name": "Operational Efficiency & Measurement Precision",
-                "description": "This category groups KVIs related to the quantification of operational performance. It includes the accuracy of energy measurements, the real-time cost of electricity, and the optimization of general operational resources (supply chain, personnel) to maximize efficiency."
-            }
-        ]
-    },
-    {
-        "id": "02",
-        "name": "Societal Sustainability",
-        "categories": [
-            {
-                "id": "021",
-                "name": "Health, Safety, and Critical Response Optimization",
-                "description": "This category encompasses KVIs that directly impact the physical and mental well-being of citizens and workers. It focuses on minimizing health risks (such as radiation and work-related injuries), reducing psychological stress in daily activities like mobility, and optimizing the speed and efficiency of critical emergency operations. These indicators measure how 6G technologies protect human life and health in both routine and crisis scenarios."
-            },
-            {
-                "id": "022",
-                "name": "Digital Inclusion, Accessibility, and Remote Equity",
-                "description": "This category focuses on democratization and equality. It groups KVIs that aim to bridge the digital divide by reducing regional disparities (rural vs. urban), lowering barriers to entry for advanced technologies (cost and hardware access), and enabling diverse populations—including those with lower skill levels or disabilities—to participate in the workforce and society through XR and remote collaboration tools."
-            },
-            {
-                "id": "023",
-                "name": "Trust, Ethics, and Service Adoption",
-                "description": "This category addresses the governance and social acceptance aspects of technology. It includes KVIs that measure adherence to ethical standards in manufacturing and sociology, the level of public trust required to adopt automated systems (such as CCAM), and the expansion of service reach to a wider user base. These indicators ensure that technological advancement aligns with societal values and achieves broad public acceptance."
-            }
-        ]
-    },
-    {
-        "id": "03",
-        "name": "Economical Sustainability & Innovation",
-        "categories": [
-            {
-                "id": "031",
-                "name": "Smart Agriculture: Financial Performance",
-                "description": "This category focuses on the direct financial benefits realized in the agricultural sector through 6G technologies. It encompasses indicators that measure monetary gains derived from reduced operational costs, increased profit margins from efficient management, and overall revenue growth driven by market expansion and higher product quality."
-            },
-            {
-                "id": "032",
-                "name": "Smart Agriculture: Operational & Resource Efficiency",
-                "description": "This category covers the physical and process-oriented improvements in farming. It groups indicators related to optimizing natural resource usage (such as water and soil), increasing physical crop yields and productivity through real-time monitoring, and streamlining general farming operations via automation."
-            },
-            {
-                "id": "033",
-                "name": "Healthcare Service Optimization & Development",
-                "description": "This category evaluates the economic and efficiency impact of 6G on the healthcare sector. It includes metrics regarding cost and time savings for patients and hospitals, improvements in operational workflows for medical services, and the broader economic development of remote areas through accessible health services."
-            },
-            {
-                "id": "034",
-                "name": "AI-Native Radio & Spectral Efficiency",
-                "description": "This category groups technical indicators focused on reducing Capital Expenditures (CAPEX) through Artificial Intelligence and Machine Learning enhancements. It specifically looks at how improved spectral efficiency, neural receivers, and optimized beam management reduce the need for costly spectrum acquisition and physical infrastructure densification."
-            },
-            {
-                "id": "035",
-                "name": "Network Operational Agility & Process Automation",
-                "description": "This category focuses on Operational Expenditure (OPEX) reductions and efficiency within the network core and management layers. It includes KVIs related to automated protocol generation, in-context learning to reduce computational complexity, capacity compression techniques, and intelligent resource selection to minimize running costs."
-            },
-            {
-                "id": "036",
-                "name": "Infrastructure Integration & TCO Reduction",
-                "description": "This category addresses structural cost reductions in network deployment and lifecycle management. It includes indicators for minimizing CAPEX by integrating sensing and communication (reducing device count), virtualized RAN efficiencies, and lowering the Total Cost of Ownership (TCO) for both operators and service providers."
-            },
-            {
-                "id": "037",
-                "name": "Connected Mobility & Fleet Economics",
-                "description": "This category is dedicated to the automotive and transport sector (Project ENVELOPE). It consolidates metrics measuring reductions in vehicle CAPEX and OPEX, improvements in fleet productivity, and the acceleration of Time-to-Market for new connected mobility solutions."
-            },
-            {
-                "id": "038",
-                "name": "Industrial Digitalization & Production Value",
-                "description": "This category covers the economic impact of 6G on manufacturing and industrial environments. It includes KVIs related to the increased utilization of robotics, productivity gains in factory work, digital twin adoption, and supply chain optimizations facilitated by extended reality (XR) and low-latency services."
-            },
-            {
-                "id": "039",
-                "name": "Business Evolution, Access & Societal Impact",
-                "description": "This category captures high-level economic and societal indicators. It includes the creation of new business values, broad economic growth, the democratization of access to technology, the ability to support new functionalities, and cost savings related to substituting physical travel with holographic communications."
-            }
-        ]
-    },
-    {
-        "id": "04",
-        "name": "Democracy",
-        "categories": [
-            {
-                "id": "041",
-                "name": "Global Service Scalability and Network Enablers",
-                "description": "This category encompasses the technical and architectural advancements required to 'democratize' access to high-performance networks. It focuses on expanding the service footprint (such as gaming and IoT), improving network intelligence, and utilizing cloud-native protocols to ensure that a broader population of users can be served with high quality, regardless of their location or domain. It aggregates KVIs that deal with the backend infrastructure (SCP, In-band intelligence) and the direct result of that infrastructure (increased user capacity and service reach)."
-            },
-            {
-                "id": "042",
-                "name": "Digital Inclusivity and Human-Centric Accessibility",
-                "description": "This category addresses the 'fairness' aspect of democracy within the digital space. It focuses on the user interface and interaction layer, specifically ensuring that advanced technologies (such as Digital Twins and XR) remain accessible to individuals with potential limitations or disabilities. The focus is on removing physical barriers to entry through adaptive interfaces (e.g., voice interaction) to guarantee equal opportunity for participation in the digital economy."
-            }
-        ]
-    },
-    {
-        "id": "05",
-        "name": "Cultural Connection",
-        "categories": [
-            {
-                "id": "051",
-                "name": "Advanced Digital Entertainment",
-                "description": "This category focuses on the expansion and technological enhancement of digital leisure sectors. It specifically tracks the growth of immersive experiences, such as thematic and cloud-rendered gaming, identifying them as key drivers for modern cultural interaction and service consumption."
-            },
-            {
-                "id": "052",
-                "name": "Digital Inclusion and Societal Participation",
-                "description": "This category encompasses indicators dedicated to the democratization of technology. It measures the effectiveness of network services (such as 5G) in bridging the digital divide, ensuring that all individuals have the necessary access and ability to actively engage with the cultural and social elements of their communities."
-            }
-        ]
-    },
-    {
-        "id": "06",
-        "name": "Knowledge",
-        "categories": [
-            {
-                "id": "061",
-                "name": "Vertical Sector Transformation and Societal Well-being",
-                "description": "This category encompasses KVIs that measure the direct impact of 6G technologies on specific vertical industries—specifically Agriculture and Healthcare—and the resulting benefits to human welfare. It focuses on the practical application of technology to solve real-world problems, such as modernizing farming practices through knowledge transfer or improving patient care. Indicators here track the enhancement of quality of life, the reduction of burdens on chronic patients (eHealth), digital leadership in home care devices, and the adoption of advanced irrigation tools by local farmers."
-            },
-            {
-                "id": "062",
-                "name": "Immersive Education and Skill Acquisition",
-                "description": "This category aggregates KVIs related to the generation, dissemination, and retention of knowledge through next-generation media (XR, Holograms). It evaluates the effectiveness and availability of educational content and training methodologies. The focus is on the quantity of immersive products available (educational and cultural), the ability to conduct remote live lectures or virtual visits, and the specific metrics regarding rapid skills acquisition and know-how retention within organizations."
-            },
-            {
-                "id": "063",
-                "name": "Accessibility, Hardware, and Community Engagement",
-                "description": "This category focuses on the enablers of knowledge transfer: the physical access to technology and the social dynamics of usage. It measures the barriers to entry and the breadth of adoption. This includes the usability and availability of necessary hardware (smartphones, holographic gear), the geographic or population coverage of these services, and the active participation of the local community in generating ideas and utilizing applications for cultural exchange."
-            }
-        ]
-    },
-    {
-        "id": "07",
-        "name": "Privacy & Confidentiality",
-        "categories": [
-            {
-                "id": "071",
-                "name": "Technical Infrastructure Security & Resilience",
-                "description": "This category encompasses KVIs that measure the objective technical capabilities, operational robustness, and specific implementation mechanisms of the network and associated digital environments. It focuses on the system's ability to withstand threats through resilience, active resource monitoring, intrusion detection, and the deployment of specific privacy-preserving technologies (such as encryption and edge-cloud security) within complex environments like 3D Digital Twins."
-            },
-            {
-                "id": "072",
-                "name": "User Trust, Perception, & Requirement Compliance",
-                "description": "This category groups KVIs that focus on the human-centric and procedural aspects of security and privacy. It evaluates the subjective trust users place in the system (perceived security and sustainability confidence) and measures the project's governance effectiveness in responding to and resolving specific user-raised concerns regarding privacy and security needs."
-            }
-        ]
-    },
-    {
-        "id": "08",
-        "name": "Simplified Life",
-        "categories": [
-            {
-                "id": "081",
-                "name": "User Experience and Subjective Satisfaction",
-                "description": "This category focuses on the human-centric evaluation of 6G services. It encompasses the qualitative feedback from users regarding their personal interactions with the technology. The KVIs in this group measure how easy, enjoyable, and useful the technology feels to the end-user, utilizing methodologies such as Likert scales and structural equation modeling to quantify perceived quality in both professional (agricultural) and leisure (venue/home) settings."
-            },
-            {
-                "id": "082",
-                "name": "Network Reliability, Trust, and Stability",
-                "description": "This category aggregates KVIs that measure the foundational dependability of the 6G infrastructure. It emphasizes the technical robustness required to build user confidence. These indicators track the consistency of network connections, the accuracy of transmitted data, the stability of smart systems, and the security of nomadic networks, all of which are prerequisites for a 'simplified life' free from technical disruptions."
-            },
-            {
-                "id": "083",
-                "name": "Time Optimization and Virtualization",
-                "description": "This category highlights the direct impact of 6G on personal and professional efficiency, specifically through the reduction of physical travel and the acceleration of tasks. These KVIs measure the tangible time savings achieved through agricultural efficiency, holographic meetings, and immersive communication tools. The focus is on how virtualization allows users to reclaim time, thereby improving work-life balance and communication effectiveness."
-            },
-            {
-                "id": "084",
-                "name": "System Adaptability and Scalable Architecture",
-                "description": "This category focuses on the technical agility of the 6G systems. It groups KVIs that measure how well the infrastructure responds to changing variables, such as varying weather conditions, increasing data volumes, or evolving use-case requirements. These indicators ensure that the technology remains 'simple' for the user by automatically handling complexity, scaling resources, and reconfiguring processes without losing functionality."
-            },
-            {
-                "id": "085",
-                "name": "Operational Integration and Data Utility",
-                "description": "This category addresses the practical application of 6G in daily workflows and decision-making loops. It includes KVIs that measure how different hardware components (drones, AGVs) integrate seamlessly, how easily users can access real-time data, and how that data translates into faster operational decisions. It also tracks the actual utilization rates of applications, reflecting the practical utility of the system."
-            },
-            {
-                "id": "086",
-                "name": "Service Accessibility and Lifestyle Enhancement",
-                "description": "This category captures the broader societal and lifestyle benefits enabled by 6G coverage. It focuses on the availability of services—ranging from food security and local market stability to entertainment and cultural events. These KVIs measure the expansion of service coverage to new populations and the enrichment of daily life through in-home entertainment and immersive event participation."
-            }
-        ]
-    },
-    {
-        "id": "09",
-        "name": "Digital Inclusion",
-        "categories": [
-            {
-                "id": "091",
-                "name": "Social Equity and Community Inclusion",
-                "description": "This category focuses on the sociological and human-centric outcomes of digital connectivity. These indicators measure the reduction of the digital divide, ensuring that under-served, under-represented, and mainstream populations alike have equitable access to digital opportunities. The primary goal is to foster community prosperity and ensure no demographic is left behind."
-            },
-            {
-                "id": "092",
-                "name": "Device Accessibility and Human-Machine Interaction",
-                "description": "This category groups indicators related to the tangible entry points of the digital world: the hardware and the user interfaces. It emphasizes the affordability of devices (budget-friendly HW), the ease of use for general populations, and specific accessibility features (such as VR UI or voice interaction) designed to assist users with disabilities or limitations in navigating environments like Digital Twins."
-            },
-            {
-                "id": "093",
-                "name": "Network Coverage and Service Scalability",
-                "description": "This category pertains to the technical infrastructure and service delivery mechanisms required to enable inclusion. It covers the physical expansion of network footprints to connect remote and unconnected populations (coverage), as well as the architectural improvements (APIs, IoT hyperscaling) necessary to serve a larger volume of users without compromising service quality."
-            }
-        ]
-    },
-    {
-        "id": "10",
-        "name": "Personal Freedom",
-        "categories": [
-            {
-                "id": "101",
-                "name": "Immersive Social Inclusion & Accessibility",
-                "description": "This category focuses on leveraging advanced XR and 6G technologies to bridge physical, biological, and geographic divides. It groups indicators that measure the effectiveness of digital solutions—such as holographic communication and adaptive SDKs—in providing equitable access to social and professional interactions. The primary goal is to quantify the reduction of barriers for individuals with disabilities or those located in remote regions, ensuring they can participate fully in the digital ecosystem without physical travel."
-            }
-        ]
-    },
-    {
-        "id": "11",
-        "name": "Personal Health & Protection from Harm",
-        "categories": [
-            {
-                "id": "111",
-                "name": "Healthcare Delivery and Medical Resilience",
-                "description": "This category encompasses KVIs focused on the direct provision of medical care, patient outcomes, and the stability of healthcare systems. It highlights the use of 6G to improve access to care in remote areas, reduce healing times, empower medical staff, and ensure services continue during crises."
-            },
-            {
-                "id": "112",
-                "name": "Occupational Health, Safety, and Industrial Efficiency",
-                "description": "This category groups KVIs related to the protection of the workforce and the optimization of industrial environments. It focuses on reducing physical load and injuries through robotics, exoskeletons, and remote operations (holo-portation), as well as efficient resource utilization in production facilities."
-            },
-            {
-                "id": "113",
-                "name": "Public Safety Operations and Practitioner Empowerment",
-                "description": "This category addresses the capabilities of public safety organizations and the resulting security of the citizenry. It includes KVIs that measure how well safety tools support practitioner decision-making, ensure data security for critical missions, and improve the public's perception of safety."
-            },
-            {
-                "id": "114",
-                "name": "Emergency Response and Disaster Mitigation",
-                "description": "This category focuses specifically on crisis management and search-and-rescue operations. The KVIs here measure the speed of response to environmental or man-made incidents, the availability of critical communications during disasters, and the effectiveness of technology in saving lives in remote areas."
-            },
-            {
-                "id": "115",
-                "name": "Societal Wellbeing: Nutrition, Mobility, and Ecology",
-                "description": "This category covers broader societal health and protection factors outside of clinical medicine and industrial work. It includes KVIs related to food security and nutrition, the reduction of traffic-related accidents and injuries, and the protection of wildlife."
-            }
-        ]
-    },
-    {
-        "id": "12",
-        "name": "Trust",
-        "categories": [
-            {
-                "id": "121",
-                "name": "System-Centric Architecture and Reliability",
-                "description": "This category encompasses KVIs that quantify trust through objective technical measures, architectural integrity, and service performance. It focuses on the implementation of Trust Functions (such as security, privacy, and resilience mechanisms), the mathematical calculation of trust levels via attestation and traceability, and the system's technical capability to maintain reliable service availability regardless of physical location. These indicators represent the 'hard' side of trust—ensuring the infrastructure works as claimed."
-            },
-            {
-                "id": "122",
-                "name": "User Perception, Social Interaction, and Governance",
-                "description": "This category groups KVIs related to the subjective, human-centric, and societal aspects of trust. It includes the measurement of user confidence (subjective feedback) in devices and AI algorithms, the enhancement of interpersonal trust between humans through immersive technologies (such as holographic facial visualization), and the broader societal trust in system governance and other users. These indicators focus on the 'soft' side of trust—how users feel about and interact with the system and each other."
-            }
-        ]
-    }
+  {
+    "code": "IWCA",
+    "title": "Increased water conservation in agriculture",
+    "description": "How do advanced features of 6G minimize water wastage?",
+    "project": "6GPATH"
+  },
+  {
+    "code": "IEEA",
+    "title": "Increased energy efficiency in agriculture",
+    "description": "How do advanced features of 6G contribute to lower energy consumption?",
+    "project": "6GPATH"
+  },
+  {
+    "code": "ISHM",
+    "title": "Increased soil health maintenance",
+    "description": "How do advanced features of 6G contribute to ensuring optimal soil health and fertility and long-term soil conservation through timely monitoring and interventions?",
+    "project": "6GPATH"
+  },
+  {
+    "code": "ICCR",
+    "title": "Increased contribution to climate resilience",
+    "description": "How do advanced features of 6G contribute to developing adaptive strategies to mitigate the impact of climate change on cultivation, such as drought resistance testing and phenological monitoring, to enhance and ensure continued productivity in changing environmental conditions?",
+    "project": "6GPATH"
+  },
+  {
+    "code": "WR-H",
+    "title": "Waste reduction",
+    "description": "How does this service contribute to reduced waste generated through packaging and disposal compared to traditional wound care products?",
+    "project": "6GPATH"
+  },
+  {
+    "code": "ERC-W",
+    "title": "Environmental regulatory compliance",
+    "description": "How does the project ensure compliance with regulations governing water usage and conservation practices in agricultural settings?",
+    "project": "6GPATH"
+  },
+  {
+    "code": "ERC-P",
+    "title": "Environmental regulatory compliance",
+    "description": "How does the project engage with policies on environmental protection and counteracting the effects of climate change?",
+    "project": "6GPATH"
+  },
+  {
+    "code": "EEI-MPC",
+    "title": "Energy efficiency improvements",
+    "description": "Model predictive control at the digital twin allows the proactive allocation of resources, anticipating changes in connectivity and traffic requirements that may cause a spike in usages of energy and spectral resources.",
+    "project": "CENTRIC"
+  },
+  {
+    "code": "EEI-CSI",
+    "title": "Energy efficiency improvements",
+    "description": "CSI compression will reduce the amount of information that needs to be transmitted between the UE and gNB. The smaller CSI payload will lead to decreased energy consumption at both the UE and gNB.",
+    "project": "CENTRIC"
+  },
+  {
+    "code": "EEI-MIMO",
+    "title": "Energy efficiency improvements",
+    "description": "AI/ML based MIMO precoding will reduce unnecessary radiation and hence, energy consumption. This will result in increased energy efficiency.",
+    "project": "CENTRIC"
+  },
+  {
+    "code": "EEI-Beam",
+    "title": "Energy efficiency improvements",
+    "description": "Dynamic adjustment of beam directions and power will result in reduced radiation and energy consumption.",
+    "project": "CENTRIC"
+  },
+  {
+    "code": "EEI-JSAC",
+    "title": "Energy efficiency improvements",
+    "description": "AI enabled JSAC can dynamically adjust resource usage for sensing and communication according to real-time channel environment conditions. This will lead to more efficient operation and hence, energy savings. Also, AI will enable energy-efficient sensing operations by intelligently optimizing energy usage while collecting information.",
+    "project": "CENTRIC"
+  },
+  {
+    "code": "EEI-Mod",
+    "title": "Energy efficiency improvements",
+    "description": "The ability to adapt symbol modulation to channel conditions will result in enhanced spectral efficiency and minimized retransmission.",
+    "project": "CENTRIC"
+  },
+  {
+    "code": "EEI-DCI",
+    "title": "Energy Efficiency improvements",
+    "description": "DCI compression techniques will reduce the bandwidth needed to transmit the same control data.",
+    "project": "CENTRIC"
+  },
+  {
+    "code": "EEI-Sem",
+    "title": "Energy Efficiency improvements",
+    "description": "The ability to extract abstract semantic concepts from complex use-cases reduces the amount of data that needs to be transmitted for control purposes. This implicitly reduces transmit power.",
+    "project": "CENTRIC"
+  },
+  {
+    "code": "EEI-Sub",
+    "title": "Energy Efficiency improvements",
+    "description": "Smart subband selection strategies will minimize the collision rate, and with it, the energy wasted in unnecessary transmissions.",
+    "project": "CENTRIC"
+  },
+  {
+    "code": "EEI-Conf",
+    "title": "Energy Efficiency improvements",
+    "description": "The ability to predict confidence in point predictions will necessarily improve control algorithms in multiple fields, among them, radio resource allocation.",
+    "project": "CENTRIC"
+  },
+  {
+    "code": "EEI-CF",
+    "title": "Energy Efficiency improvements",
+    "description": "Smart clustering of cell free access points will optimize the transmit power needed to achieve a target capacity, while minimizing unnecessary radiation and energy waste.",
+    "project": "CENTRIC"
+  },
+  {
+    "code": "EE-CCL",
+    "title": "Energy efficiency",
+    "description": "ORIGAMI's CCL (Compute Continuum Layer) will allow multiplexing a heterogeneous computing fabric comprised of energy-hungry yet powerful resources and energy-light yet capped resources.",
+    "project": "ORIGAMI"
+  },
+  {
+    "code": "REC",
+    "title": "Reduced Energy Consumption",
+    "description": "Use of a dynamic, automated, AI-driven optimization of the usage of RAN resources.",
+    "project": "ORIGAMI"
+  },
+  {
+    "code": "RTAE",
+    "title": "Reduce travel and associated emissions",
+    "description": "Holographic meeting instead of travel, smartphones. In-cloud processing for reducing overall energy consumption. Live validations digitally signed by digital video processing.",
+    "project": "6GXR"
+  },
+  {
+    "code": "IAPH",
+    "title": "Increased area of protected and surveyed natural habitats and climate preserves",
+    "description": "The AR/VR demo UC of the project could be extended to rescue operations.",
+    "project": "DESIRE6G"
+  },
+  {
+    "code": "NEB",
+    "title": "Number of exhausted batteries",
+    "description": "6G network would enable the feasibility of occupational exoskeletons with offloaded control. This would in turn enable the delocalization of part of the exoskeleton's hardware, which would lead to a reduction in the exoskeleton's power consumption.",
+    "project": "DETERMINISTIC6G"
+  },
+  {
+    "code": "MRCF",
+    "title": "Measures the reduction of the carbon footprint associated to travels",
+    "description": "Measures the reduction of the carbon footprint associated to travels by eliminating the physical meetings Within local and global communities, asset logistics and other transportation through the adoption of collaborative DT environments.",
+    "project": "6GXR"
+  },
+  {
+    "code": "ROPT",
+    "title": "Resources optimization",
+    "description": "Resources (material, energy, equipment, supply chain, personal, etc.) optimization due to the decentralized location of the people and assets. Then, the optimal allocation of the resources can be selected according to the restrictions in place or organizational decisions.",
+    "project": "6GXR"
+  },
+  {
+    "code": "MEUP",
+    "title": "Allowing stakeholders to monitor energy usage patterns",
+    "description": "Allowing stakeholders to monitor energy usage patterns promptly and make informed decisions to optimize energy efficiency.",
+    "project": "6GXR"
+  },
+  {
+    "code": "MFS",
+    "title": "Measures the framework's capability to facilitate sharing",
+    "description": "Measures the framework's capability to facilitate sharing of energy data with relevant stakeholders.",
+    "project": "6GXR"
+  },
+  {
+    "code": "IEE-M",
+    "title": "Improved energy efficiency by providing accurate measurements",
+    "description": "Improved energy efficiency by providing accurate and real-time energy measurements and energy balancing as a whole system.",
+    "project": "6GXR"
+  },
+  {
+    "code": "EPCC",
+    "title": "The electricity prices to calculate the cost",
+    "description": "The electricity prices to calculate the cost of operating the system.",
+    "project": "6GXR"
+  },
+  {
+    "code": "QLP",
+    "title": "Quantifies the level of precision",
+    "description": "It quantifies the level of precision achieved in measuring E2E energy measurement framework, expressed as a percentage of accuracy.",
+    "project": "6GXR"
+  },
+  {
+    "code": "ARGHG",
+    "title": "Assesses the reduction in greenhouse gas emissions",
+    "description": "Assesses the reduction in greenhouse gas emissions achieved through the use case, promoting a more sustainable and environmentally friendly energy system.",
+    "project": "6GXR"
+  },
+  {
+    "code": "OEMF",
+    "title": "KVI 1: Optimisation of EMF for given coverage. KVI 2: Optimisation of Energy Footprint for given services",
+    "description": "Stakeholder: Providers & Users Effect on: State of Being KVI1 description: Low EMF. KVI2 description: Lower Energy Consumption.",
+    "project": "6G-SENSES"
+  },
+  {
+    "code": "OEF",
+    "title": "KVI 1: Optimisation of Energy Footprint for given services",
+    "description": "Stakeholder: Providers & Users Effect on: State of Being KV1 description: Lower Energy Consumption. KV2 description: Lower Energy Resources utilisation.",
+    "project": "6G-SENSES"
+  },
+  {
+    "code": "RF-ER",
+    "title": "To reduce footprint on energy, resources, and emissions",
+    "description": "Improved device/App/Service energy efficiency. Improve sustainability in other parts of society and industry.",
+    "project": "FIDAL"
+  },
+  {
+    "code": "ILPS",
+    "title": "Increases lifespan of products and services",
+    "description": "Keeping technology and related services in action longer reduces e-waste and resources mined. Improved durability of technology or service via ability to refurbish, repair, and upgrade in ways that are acceptable to users/consumers.",
+    "project": "FIDAL"
+  },
+  {
+    "code": "GUEC",
+    "title": "Greater understanding of environmental challenges",
+    "description": "The ability to better understand the environmental footprints being produced by the innovation. Increased number of environmental factors monitored for.",
+    "project": "FIDAL"
+  },
+  {
+    "code": "RUO",
+    "title": "Resource Usage Optimization",
+    "description": "Efficiency in resource allocation in cloud and edge computing environments to minimize idle processing power and unnecessary storage. Measurement unit: resource utilization percentage or efficiency rate.",
+    "project": "ENVELOPE"
+  },
+  {
+    "code": "WR-E",
+    "title": "Waste Reduction",
+    "description": "The amount of electronic waste generated due to hardware upgrades or obsolescence by the ENVELOPE use case compared to baseline. A reduction in hardware devices required by the ENVELOPE use case compared to baseline (for instance having a more efficient architecture with less hardware nodes) would mean a reduction in hardware waste.",
+    "project": "ENVELOPE"
+  },
+  {
+    "code": "CFR",
+    "title": "Carbon Footprint Reduction",
+    "description": "The total CO2 emissions generated by the operation of the ENVELOPE use case compared with state of the art or baseline.",
+    "project": "ENVELOPE"
+  },
+  {
+    "code": "EC-E",
+    "title": "Energy Consumption",
+    "description": "The amount of energy consumed (kwh) by the ENVELOPE use case compared with the baseline.",
+    "project": "ENVELOPE"
+  },
+  {
+    "code": "TTE",
+    "title": "Travel Time Emissions",
+    "description": "Assesses the reduction of average travel time spent by citizens. Rerouting with more optimal paths can be achieved due to the information sharing.",
+    "project": "ENVELOPE"
+  },
+  {
+    "code": "OEF-ECO",
+    "title": "Optimisation of Energy Footprint for given services",
+    "description": "Stakeholders addressed: Providers & Users. Low Energy Consumption / Low Energy Resources utilization.",
+    "project": "ECO-eNET"
+  },
+  {
+    "code": "EFUT",
+    "title": "Environmental footprint of urban transport of persons and goods",
+    "description": "Precise positioning / localization.",
+    "project": "6G-EWOC"
+  },
+  {
+    "code": "EEI-E",
+    "title": "Energy efficiency improvements",
+    "description": "Provisioning of traffic flows achieving 50% reduction of the energy consumption.",
+    "project": "6G-EWOC"
+  },
+  {
+    "code": "EOAHC",
+    "title": "Equal opportunities for accessing holographic communication for everyone with a smartphone",
+    "description": "Smartphones, Low-cost XR capture and display gadgets, Software Development Kits (SDKs) for integrating holographic comms in third-party XR products.",
+    "project": "6GXR"
+  },
+  {
+    "code": "EAN",
+    "title": "EMF aware networks",
+    "description": "Smart clustering of cell-free access points will optimize the transmit power needed to achieve a target capacity, while minimizing unnecessary radiation and energy waste.",
+    "project": "CENTRIC"
+  },
+  {
+    "code": "RERT",
+    "title": "Reduced emergency response times due to critical event detection and localization",
+    "description": "The AR/VR demo UC of the project could be extended to rescue operations.",
+    "project": "DESIRE6G"
+  },
+  {
+    "code": "IOE",
+    "title": "Increased operational efficiency in critical missions",
+    "description": "The AR/VR demo UC of the project could be extended to rescue operations.",
+    "project": "DESIRE6G"
+  },
+  {
+    "code": "CCWI",
+    "title": "Cost of care of work-related injuries",
+    "description": "6G network would enable the integration of occupational exoskeletons with network sensors and offloaded control algorithms. This reduces exoskeleton weight/cost and optimizes assistance, potentially reducing the number/severity of work-related injuries and treatment costs.",
+    "project": "DETERMINISTIC6G"
+  },
+  {
+    "code": "DAFP",
+    "title": "Diversity among factory personnel",
+    "description": "Remote support and overlay in Extended Reality (XR) device may allow for less skilled workers or workers with disabilities to perform tasks on the factory floor.",
+    "project": "DETERMINISTIC6G"
+  },
+  {
+    "code": "RCES",
+    "title": "Remote collaboration enhances societal and team productivity/efficiency",
+    "description": "Digital presence, Rural and industrial equality, Telepresence.",
+    "project": "6GXR"
+  },
+  {
+    "code": "MPET",
+    "title": "Measures productivity and efficiency in remote teamwork",
+    "description": "VR telepresence and remote control. (Also addresses reduction of regional disparities of rural area).",
+    "project": "6GXR"
+  },
+  {
+    "code": "EAEP",
+    "title": "Ensure the adherence to ethical practices in place in both manufacturing and sociological practices",
+    "description": "Proof of ethical compliance and channel to introduce potential ethical limitations. Register potential deviations of the ethical politics and ensure corrective actions.",
+    "project": "6GXR"
+  },
+  {
+    "code": "LSM",
+    "title": "Less Stressful Mobility",
+    "description": "Assesses the decrease in stress levels of citizens when using ENVELOPE mobility solutions compared to baseline.",
+    "project": "ENVELOPE"
+  },
+  {
+    "code": "TIC",
+    "title": "Trust In CCAM",
+    "description": "Evaluates the level of public trust and willingness to adopt CCAM (Cooperative, Connected and Automated Mobility) technologies.",
+    "project": "ENVELOPE"
+  },
+  {
+    "code": "IU",
+    "title": "Increase Users",
+    "description": "More users can be served with the ENVELOPE use case compared with the baseline; Gr-UC6 achieves accurate local situation awareness and provides traffic information notifications to a wide range of users.",
+    "project": "ENVELOPE"
+  },
+  {
+    "code": "ICSAA",
+    "title": "Increased cost savings in agricultural activities",
+    "description": "How do advanced features of 6G save operational costs in agricultural activities through efficient crop management practices (ex, water saving/pesticide saving)?",
+    "project": "6GPATH"
+  },
+  {
+    "code": "OCS-H",
+    "title": "Operational cost savings",
+    "description": "How does the 6G-facilitated 3D hydrogel patch service contribute to reducing transportation costs for patients and healthcare systems, hospital admission costs, the overall cost of medical equipment and maintenance?",
+    "project": "6GPATH"
+  },
+  {
+    "code": "TS-H",
+    "title": "Time savings",
+    "description": "How does the 6G facilitate 3D hydrogel patches service contribute to saving cost (time for patients to travel and wait, time of hospitalisation, connectivity speed, and computation time).",
+    "project": "6GPATH"
+  },
+  {
+    "code": "IP-A",
+    "title": "Increased profits",
+    "description": "How do advanced features of 6G contribute to increasing the profits from agriculture through efficient crop management practices (ex, water saving/pesticide saving)?",
+    "project": "6GPATH"
+  },
+  {
+    "code": "IPAA",
+    "title": "Increased productivity in agricultural activities",
+    "description": "How do advanced features of 6G increase the agriculture production/yield and quality resulting from timely interventions based on real-time data monitoring?",
+    "project": "6GPATH"
+  },
+  {
+    "code": "IOEA",
+    "title": "Increased operational efficiency in agricultural activities",
+    "description": "How do advanced features of 6G help to increase operational efficiency through automation and real-time monitoring to streamline the farming process?",
+    "project": "6GPATH"
+  },
+  {
+    "code": "RUO",
+    "title": "Resource Utilization Optimization",
+    "description": "How do advanced features of 6G contribute to optimal resource utilization by reducing water consumption through precise irrigation scheduling enabled by real-time soil moisture monitoring, and decreasing fertilizer usage reducing waste and costs?",
+    "project": "6GPATH"
+  },
+  {
+    "code": "RG",
+    "title": "Revenue Growth",
+    "description": "How do advanced features of 6G contribute to increasing the revenue through market expansion (due to enhanced product quality), premium pricing, and the creation of new revenue opportunities (agritourism, eco-certifications, etc.)?",
+    "project": "6GPATH"
+  },
+  {
+    "code": "OE-H",
+    "title": "Operational Efficiency",
+    "description": "How does the 6G facilitated 3D hydrogel patches service contribute to operational efficiency through streamlined operations, reducing the time and resources needed per patient?",
+    "project": "6GPATH"
+  },
+  {
+    "code": "ED",
+    "title": "Economic Development",
+    "description": "How does the 6G facilitated 3D hydrogel patches service contribute to enhancing the economic stability of remote areas by providing essential services locally?",
+    "project": "6GPATH"
+  },
+  {
+    "code": "OR-ICL",
+    "title": "OPEX reductions (In-context learning)",
+    "description": "In-context learning is a data-efficient form of meta-learning that does not require explicit optimization at run time, enabling the network to quickly adapt to changing conditions, reducing sample and computational complexity.",
+    "project": "CENTRIC"
+  },
+  {
+    "code": "CR-CSI",
+    "title": "CAPEX reductions (CSI compression)",
+    "description": "CSI compression will result in reduced bandwidth requirement for CSI feedback translating to minimized need for spectrum licenses.",
+    "project": "CENTRIC"
+  },
+  {
+    "code": "CR-MIMO",
+    "title": "CAPEX reductions (MIMO precoding)",
+    "description": "AIML based MIMO precoding will enhance spectral efficiency translating to reduction in capital investments for acquiring more spectrum.",
+    "project": "CENTRIC"
+  },
+  {
+    "code": "CR-JSAC",
+    "title": "CAPEX reductions (JSAC)",
+    "description": "JSAC (Joint Sensing and Communication) will reduce the need for separate networks and devices, translating to CAPEX reductions via elimination of the investment required to deploy and maintain separate systems.",
+    "project": "CENTRIC"
+  },
+  {
+    "code": "CR-NR",
+    "title": "CAPEX reductions (Neural Receiver)",
+    "description": "The developed neural receiver will improve the system's spectral efficiency, translating to reduction in capital investments for acquiring more spectrum.",
+    "project": "CENTRIC"
+  },
+  {
+    "code": "CR-BM",
+    "title": "CAPEX reductions (Beam Management)",
+    "description": "AIML optimised beam management will lead to improved coverage in specific areas translating to a reduction in the need for additional gNBs or infrastructure to cover the same area.",
+    "project": "CENTRIC"
+  },
+  {
+    "code": "OR-DCI",
+    "title": "OPEX reductions (DCI compression)",
+    "description": "DCI compression will increase network capacity and help the network serve more users in the same bandwidth, allowing operating margins to grow.",
+    "project": "CENTRIC"
+  },
+  {
+    "code": "CR-PRO",
+    "title": "CAPEX reductions (Protocols)",
+    "description": "The ability to automatically produce protocols to solve a concrete use-case will reduce development efforts significantly.",
+    "project": "CENTRIC"
+  },
+  {
+    "code": "RC-O",
+    "title": "Reduced CAPEX",
+    "description": "Compute-aware virtualized RAN solutions that can build reliable RAN systems that improve cost and energy-efficiency.",
+    "project": "ORIGAMI"
+  },
+  {
+    "code": "CE-O",
+    "title": "Cost efficiency",
+    "description": "A system that discovers and monitors available resources from different providers can select the most cost efficient and higher performance components maintained by each provider.",
+    "project": "ORIGAMI"
+  },
+  {
+    "code": "BV",
+    "title": "Business Value",
+    "description": "Business impact and migration guidelines towards 6G scenarios.",
+    "project": "PREDICT6G"
+  },
+  {
+    "code": "EG",
+    "title": "Economic Growth",
+    "description": "Business impact and migration guidelines towards 6G scenarios.",
+    "project": "PREDICT6G"
+  },
+  {
+    "code": "IURI",
+    "title": "Increased use of robots in industrial activities",
+    "description": "Highlights the potential increase in the use of robots if xURLLC services are supported (Linked to Robotic Digital Twin UC).",
+    "project": "DESIRE6G"
+  },
+  {
+    "code": "IPFW",
+    "title": "Increased productivity in factory work",
+    "description": "Highlights the potential increase in the use of robots if xURLLC services are supported (Linked to Robotic Digital Twin UC).",
+    "project": "DESIRE6G"
+  },
+  {
+    "code": "CST",
+    "title": "Cost savings associated to travel expenses",
+    "description": "Centralized team measuring the cost savings associated to the use of holographic communications (travel, accommodation, logistics, time improvement).",
+    "project": "6GXR"
+  },
+  {
+    "code": "OII",
+    "title": "Other improvements associated to implementation",
+    "description": "Covers industrial gaps such as supply chain optimization, remote inspections, functional collaboration, and real-time interactions.",
+    "project": "6GXR"
+  },
+  {
+    "code": "EIP",
+    "title": "Economical improvements associated to production",
+    "description": "Improvements in productivity and efficiency through the adoption of DT (Digital Twin) environment. Partially enabled by the ability to differentiate and customize production.",
+    "project": "6GXR"
+  },
+  {
+    "code": "RTCO-S",
+    "title": "Reduction of Total Cost of Ownership for service provisioning",
+    "description": "Economically efficient solution for providers and economically efficient service provisioning to end users.",
+    "project": "6G-SENSES"
+  },
+  {
+    "code": "PAPI",
+    "title": "People's access and the potential spread of impact",
+    "description": "Seamless compatibility for evolution to new capabilities without requiring new infrastructure or devices.",
+    "project": "FIDAL"
+  },
+  {
+    "code": "ASAF",
+    "title": "Ability to support additional functionality and content",
+    "description": "6G systems set up to support the entry of new players with new functionality and content they can control, maintaining healthy local economies and user control.",
+    "project": "FIDAL"
+  },
+  {
+    "code": "OCS-E",
+    "title": "Operational Cost Savings",
+    "description": "Assesses the savings in vehicle operation and maintenance due to optimized routes, reduced idling, and real-time information sharing.",
+    "project": "ENVELOPE"
+  },
+  {
+    "code": "CR-E",
+    "title": "CapEx Reduction",
+    "description": "Cost reduction in acquiring, upgrading, and maintaining physical assets in comparison to baseline.",
+    "project": "ENVELOPE"
+  },
+  {
+    "code": "TTMR",
+    "title": "Time To Market Reduction",
+    "description": "Tracks the time taken to develop and launch new solutions or technologies (e.g., easier software updates, virtualization of tests).",
+    "project": "ENVELOPE"
+  },
+  {
+    "code": "OR-E",
+    "title": "OpEx Reduction",
+    "description": "Cost reduction for running the ENVELOPE system/service (day-to-day expenses) in comparison to baseline.",
+    "project": "ENVELOPE"
+  },
+  {
+    "code": "IP-E",
+    "title": "Increase Productivity",
+    "description": "Measures the improvement in productivity due to automation and optimization compared to baseline (e.g., less time spent by fleet supervisors).",
+    "project": "ENVELOPE"
+  },
+  {
+    "code": "RTCO-EE",
+    "title": "Reduction of TCO for service provisioning",
+    "description": "Economically efficient solution provided to network operators. Economically efficient service provisioning to end users/other actors.",
+    "project": "ECO-eNET"
+  },
+  {
+    "code": "IFGS",
+    "title": "Increased footprint of gaming services",
+    "description": "The Cloud Rendered Gaming UC highlight the potential increase of gaming services.",
+    "project": "DESIRE6G"
+  },
+  {
+    "code": "MUS",
+    "title": "More users can be served with improved service quality",
+    "description": "Design and develop NI functionalities and global APIs that enable global deployment of services (e.g., IoT hyperscalers) with multi-domain performance guarantees.",
+    "project": "ORIGAMI"
+  },
+  {
+    "code": "DII",
+    "title": "Demonstration of in-band intelligence",
+    "description": "Design and develop NI functionalities and global APIs that enable global deployment of services (e.g., IoT hyperscalers) with multi-domain performance guarantees.",
+    "project": "ORIGAMI"
+  },
+  {
+    "code": "CNISCP",
+    "title": "A cloud native implementation of the Service Communication Proxy (SCP)",
+    "description": "Design and develop NI functionalities and global APIs that enable global deployment of services (e.g., IoT hyperscalers) with multi-domain performance guarantees.",
+    "project": "ORIGAMI"
+  },
+  {
+    "code": "MFO",
+    "title": "Measures fair opportunity as accessibility and user interface for industrial production by the DT participation",
+    "description": "VR telepresence and remote control, VR UI, accessibility Digital accessibility supplementing potential limitations of people interacting with the Digital Twin like hand disabilities (i.e., voice interaction) Telepresence in a common digital environment Accessible immersive UI EAA guidelines.",
+    "project": "6GXR"
+  },
+  {
+    "code": "INTG",
+    "title": "Increased number of thematic gaming",
+    "description": "The Cloud Rendered Gaming UC highlight the potential increase of gaming services.",
+    "project": "DESIRE6G"
+  },
+  {
+    "code": "TAHAP",
+    "title": "The ability to help all people make the most of 5G to improve their ability to actively participate in cultural elements of society.",
+    "description": "People expect they will have access to participate in their communities as enabled by the service.",
+    "project": "FIDAL"
+  },
+  {
+    "code": "IPAS",
+    "title": "Increased presence of agriculture sector",
+    "description": "How does the 6G-PATH project ensure knowledge transfer and adoption of advanced irrigation technologies using 6G among local farmers?",
+    "project": "6GPATH"
+  },
+  {
+    "code": "DL",
+    "title": "Digital leadership",
+    "description": "How does this service contribute to providing devices for connected home health services?",
+    "project": "6GPATH"
+  },
+  {
+    "code": "EQL",
+    "title": "Enhanced Quality of Life",
+    "description": "How does this service contribute to improved quality of life for patients by allowing them to maintain a more normal lifestyle with fewer disruptions due to medical appointments?",
+    "project": "6GPATH"
+  },
+  {
+    "code": "SU",
+    "title": "Societal Upgrade",
+    "description": "How does this service contribute to better adoption of eHealth services by reducing the need for travelling of chronic patients?",
+    "project": "6GPATH"
+  },
+  {
+    "code": "IP6GAS",
+    "title": "Increased presence of 6G in agriculture sector",
+    "description": "How does the 6G-PATH project ensure knowledge transfer and adoption of advanced irrigation technologies using 6G among local farmers?",
+    "project": "6GPATH"
+  },
+  {
+    "code": "IALL",
+    "title": "Increased access to live lectures seminars and conferences enabled thanks to holographic communications",
+    "description": "Retention of the lectures content via digital recording, training activities, virtual visit to cultural heritage and touristic places, virtual attendance to events.",
+    "project": "6GXR"
+  },
+  {
+    "code": "ETA",
+    "title": "Enhancements of the training activities using holograms communications",
+    "description": "Rapid and effective skills acquisition, know-how retention within upper organizations, standardization of the pedagogical way to transmit the content, and SDK which improves the training creation process.",
+    "project": "6GXR"
+  },
+  {
+    "code": "EUAH",
+    "title": "Easiness to use of accessible Hardware (HW)",
+    "description": "Holographic meeting, smartphones, rapid and effective skills acquisition, budget-friendly HW in which holographic communications can be operated, and globalization of the compatible HW.",
+    "project": "6GXR"
+  },
+  {
+    "code": "MPI",
+    "title": "Measure the increased participation and involvement of the local community",
+    "description": "Utilization rate of the application and usability, cultural exchange, amount of content stored in the environment, and number of ideas generated.",
+    "project": "6GXR"
+  },
+  {
+    "code": "IIECP",
+    "title": "Increase in # of educational/cultural products available as immersive services",
+    "description": "Remote/Live Participation in education (KVI1) and economically efficient participation in education and cultural products (KVI2).",
+    "project": "6G-SENSES"
+  },
+  {
+    "code": "IIA",
+    "title": "Increase in areas (population/coverage) having access to these products",
+    "description": "Broader population and coverage access to educational and cultural products.",
+    "project": "6G-SENSES"
+  },
+  {
+    "code": "IIEP",
+    "title": "Increase in # of educational products",
+    "description": "Remote, high-quality participation in education (lessons, material, etc.) that are available as immersive services.",
+    "project": "ECO-eNET"
+  },
+  {
+    "code": "RCS-DDSS",
+    "title": "Reported confidence in sustainable digital devices, systems, and services used in the use-case development and operation- to be updated",
+    "description": "% of the users expressing positive evaluation regarding the sustainability of the devices, network, developed applications and services.",
+    "project": "TrialsNet"
+  },
+  {
+    "code": "RPS-DDSS",
+    "title": "Reported perceived security of the digital devices, systems, and services used in the use-case development and operation.",
+    "description": "% of the users expressing positive evaluation regarding the secureness of the devices and of the E2E system.",
+    "project": "TrialsNet"
+  },
+  {
+    "code": "SEC",
+    "title": "Security",
+    "description": "Security resilience is defined as the ability to adapt and recover from challenging and unforeseen situations.",
+    "project": "PREDICT6G"
+  },
+  {
+    "code": "OSI",
+    "title": "Optimized and secure infrastructure",
+    "description": "Monitoring resources from different providers to identify anomalies and intrusion detection",
+    "project": "ORIGAMI"
+  },
+  {
+    "code": "MEPS-3DDT",
+    "title": "Measure the effectiveness of the privacy and security of 3D DT environments. Key points to check are user data, privacy and confidentiality, and other potential security leaks. Virtual interaction needs to comply with general and industry standards.",
+    "description": "VR telepresence avatars, edge cloud, E2E communications SDK to implement masks in communication and video streaming Edge and cloud combination to reduce potential points of attack Encrypted information",
+    "project": "6GXR"
+  },
+  {
+    "code": "PUC-USCA",
+    "title": "% of collected use case user security concerns that are addressed.",
+    "description": "Ensuring that as the complexity of networking increases, the systems, platforms, and apps consider the security needs of the organisations and users who are impacted by these tools.",
+    "project": "FIDAL"
+  },
+  {
+    "code": "PUC-UPCA",
+    "title": "% of collected use case user privacy concerns that are addressed.",
+    "description": "Ensuring that as the complexity of networking increases, the systems, platforms, and apps consider the privacy needs of the users and citizens who are impacted by these tools.",
+    "project": "FIDAL"
+  },
+  {
+    "code": "ITSAA",
+    "title": "Increased time savings in agricultural activities",
+    "description": "How do advanced features of 6G save time through efficient crop management practices?",
+    "project": "6GPATH"
+  },
+  {
+    "code": "IUS",
+    "title": "Increased user satisfaction",
+    "description": "What is the users' level of satisfaction with the advanced features of 6G in the agriculture process?",
+    "project": "6GPATH"
+  },
+  {
+    "code": "IEOU",
+    "title": "Increased ease of use",
+    "description": "What is the users' level of satisfaction with the ease of using the advanced features of 6G in the agriculture process?",
+    "project": "6GPATH"
+  },
+  {
+    "code": "INR",
+    "title": "Increased network reliability",
+    "description": "What is the users' rating on the accuracy of using advanced features of 6G without disruptions in agricultural activities?",
+    "project": "6GPATH"
+  },
+  {
+    "code": "IDR",
+    "title": "Increased data reliability",
+    "description": "What is users' rating on the accuracy and consistency of data collected from sensors and drones using advanced features of 6G to support decision-making processes in agriculture?",
+    "project": "6GPATH"
+  },
+  {
+    "code": "IDA",
+    "title": "Increased data accessibility",
+    "description": "What is the users' rating on the ease of access to real-time data on hydric states, weather conditions, and crop phenology using advanced features of 6G?",
+    "project": "6GPATH"
+  },
+  {
+    "code": "ISS",
+    "title": "Increased system scalability",
+    "description": "What is the users' rating on the ability of advanced features of 6G to handle increasing volumes of data and expanding sensor networks as the crop cultivation operations grow?",
+    "project": "6GPATH"
+  },
+  {
+    "code": "IT",
+    "title": "Increased trust",
+    "description": "What is the users' rating of the overall trustworthiness of 6G advanced features in agricultural activities?",
+    "project": "6GPATH"
+  },
+  {
+    "code": "RAS",
+    "title": "Reliability and Stability",
+    "description": "What are the user experiences regarding the reliability and stability of smart vineyard technologies, including network connectivity and data processing?",
+    "project": "6GPATH"
+  },
+  {
+    "code": "ATC",
+    "title": "Adaptability to Conditions",
+    "description": "What is the user feedback on the system's adaptability to varying vineyard conditions, such as changes in weather or crop health?",
+    "project": "6GPATH"
+  },
+  {
+    "code": "SI",
+    "title": "Seamless Integration",
+    "description": "What is the operator feedback on the integration of different components (Crates, Terraview OS, AAVs, AGVs) with 6G technology and their smooth functioning together?",
+    "project": "6GPATH"
+  },
+  {
+    "code": "IOE",
+    "title": "Increased operational efficiency",
+    "description": "What is users' feedback on how real-time data and analytics from the smart vineyard system have improved their decision-making processes and, on the speed, and effectiveness of responses to vineyard issues, such as pest infestations or equipment malfunctions?",
+    "project": "6GPATH"
+  },
+  {
+    "code": "TA",
+    "title": "Technology Adoption",
+    "description": "How does this service contribute to secured and reliable small nomadic networks designed for eHealth?",
+    "project": "6GPATH"
+  },
+  {
+    "code": "PEEEQV",
+    "title": "Perceived easiness, enjoyment and emotional quality of the experience in the venue",
+    "description": "Questionnaires, 5-point likert scale, Partial least squares structural equation model (PLS-SEM).",
+    "project": "TrialsNet"
+  },
+  {
+    "code": "PEEEQH",
+    "title": "Perceived easiness, enjoyment and emotional quality of the experience at home",
+    "description": "Questionnaires, 5-point likert scale, Partial least squares structural equation model (PLS-SEM).",
+    "project": "TrialsNet"
+  },
+  {
+    "code": "PUAE",
+    "title": "Perceived usefulness and ease of use",
+    "description": "Questionnaires, 5-point likert scale, Partial least squares structural equation model (PLS-SEM).",
+    "project": "TrialsNet"
+  },
+  {
+    "code": "IOIHE",
+    "title": "Increased options for in-home entertainment",
+    "description": "The Cloud Rendered Gaming UC highlight the potential increase of gaming services.",
+    "project": "DESIRE6G"
+  },
+  {
+    "code": "FSA",
+    "title": "Food security and availability",
+    "description": "How does using advanced agriculture practices facilitated by 6G improve the contribution to local food security by improving the yield and quality of grapes and ensuring a stable supply for local markets?",
+    "project": "ORIGAMI"
+  },
+  {
+    "code": "VMST",
+    "title": "Virtual meetings contribute to saving time due to unnecessary travels",
+    "description": "Family and work balance, Productivity, Enhancement of the people who focus on their comfort zone, SDK standardization of the meeting rooms with the necessary interactive material.",
+    "project": "6GXR"
+  },
+  {
+    "code": "RTIE",
+    "title": "Reduced travel and immersive experience which improve quality of life by saving time and increasing quality of communication",
+    "description": "Holographic meeting and smartphones.",
+    "project": "6GXR"
+  },
+  {
+    "code": "RTIE2",
+    "title": "Reduced travel and immersive experience which improve quality of life by saving time and increasing quality of communication",
+    "description": "Utilization rate of the application and usability, and accessibility.",
+    "project": "6GXR"
+  },
+  {
+    "code": "ICE",
+    "title": "Improvement of the communications and effectiveness of the information shared while people's time is saved as no travel is needed",
+    "description": "Utilization rates of the application, Time saved while using the application in comparison with travel, Reduction of misunderstandings due to the immersion of the solution.",
+    "project": "6GXR"
+  },
+  {
+    "code": "IIES",
+    "title": "Increase in # events available as immersive services",
+    "description": "Remote/Live Participation in various events (enabled by Immersive services support).",
+    "project": "6G-SENSES"
+  },
+  {
+    "code": "IAHA",
+    "title": "Increase in areas (population/coverage) having access to these events",
+    "description": "Resource efficient Manufacturing; Enablement of Industry 5.0.",
+    "project": "6G-SENSES"
+  },
+  {
+    "code": "FANR",
+    "title": "Flexible to adapt to new requirements, use contexts, and new use objectives",
+    "description": "Alternative approaches possible for each system configuration.",
+    "project": "FIDAL"
+  },
+  {
+    "code": "ORA",
+    "title": "Optimal resource allocation",
+    "description": "Ability to Scale System with Need or System functions as needed in different contexts.",
+    "project": "FIDAL"
+  },
+  {
+    "code": "PCCR",
+    "title": "Process components can be reconfigured without losing function",
+    "description": "The ability to implement and deploy a system in the regions where it can provide the most benefit.",
+    "project": "FIDAL"
+  },
+  {
+    "code": "DI",
+    "title": "Digital inclusion",
+    "description": "Digital Inclusion and Equitable Access.",
+    "project": "6GPATH"
+  },
+  {
+    "code": "EAH-DI",
+    "title": "Easiness of using accessible Hardware (HW), which improves the digital inclusion of the whole society.",
+    "description": "Includes holographic-meeting, smartphones, rapid and effective skills acquisition, budget-friendly HW in which holographic communications can be operated, globalization of compatible HW, easy-to-use HW, and a variety of versions to match different society use cases.",
+    "project": "6G-XR"
+  },
+  {
+    "code": "MFO-DT",
+    "title": "Measures fair opportunity as accessibility and user interface for industrial production by the DT participation.",
+    "description": "Involves VR telepresence and remote control, VR UI, and digital accessibility supplementing potential limitations of people interacting with the Digital Twin (e.g., hand disabilities via voice interaction) in a common digital environment, following EAA guidelines.",
+    "project": "6G-XR"
+  },
+  {
+    "code": "SDI",
+    "title": "Social and digital inclusion (reducing the digital divide of who has access, serving the historically under-served to be able to fully participate in activities and society).",
+    "description": "Access to service for all users.",
+    "project": "FIDAL"
+  },
+  {
+    "code": "MUB-SQ",
+    "title": "More users can be served with improved service quality.",
+    "description": "Design and develop NI functionalities and global APIs that enable global deployment of services (e.g., IoT hyperscalers) with multi-domain performance guarantees.",
+    "project": "ORIGAMI"
+  },
+  {
+    "code": "ICF",
+    "title": "KVI1: Increase in coverage footprint",
+    "description": "Connecting the unconnected thus fostering inclusion of remote populations in digital services. (Stakeholder: Users; Effect on: Activities).",
+    "project": "6G-SENSES"
+  },
+  {
+    "code": "AWE-CP",
+    "title": "Acting in ways that enable communities to prosper, support the needs of all, including the under-represented, and bridge the digital divide.",
+    "description": "The ability to show that these innovations matter not just for the mainstream and wealthy (e.g., those with easy access) but that they can support the lives and well-being of all.",
+    "project": "FIDAL"
+  },
+  {
+    "code": "IAPD",
+    "title": "Increase accessibility for people with disabilities or those who are unable to travel",
+    "description": "Covers holographic meetings and smartphones to break physical/geographic barriers and reduce costs; includes SDK functionalities allowing users to change hologram appearance to cover potential disabilities; and ensures connectivity in remote regions.",
+    "project": "6GXR"
+  },
+  {
+    "code": "ICFS",
+    "title": "Increased contribution to food security",
+    "description": "How do advanced features of 6G contribute to maintaining a stable agricultural food supply by improving crop resilience to climate change and optimizing resource utilization in agricultural production?",
+    "project": "6GPATH"
+  },
+  {
+    "code": "ICPHN",
+    "title": "Increased contribution to public health and nutrition",
+    "description": "How do advanced features of 6G contribute to better nutritional outcomes for the local population by improving the quality and availability of agricultural products?",
+    "project": "6GPATH"
+  },
+  {
+    "code": "IPH",
+    "title": "Improved Public health",
+    "description": "How does this service contribute to improved health service to the patients by visiting patients (reducing the number of missed hospital visits) while at the same time serving multiple patients with a reduced number of highly trained personnel?",
+    "project": "6GPATH"
+  },
+  {
+    "code": "IWSH",
+    "title": "Increased workforce safety and health",
+    "description": "How does using advanced agriculture practices facilitated by 6G improve worker safety and health conditions due to the reduction of manual labour-intensive tasks and the implementation of autonomous machinery?",
+    "project": "6GPATH"
+  },
+  {
+    "code": "IHA",
+    "title": "Improved Healthcare Access",
+    "description": "How does this service contribute to increased access to high-quality medical care for patients in remote and underserved areas?",
+    "project": "6GPATH"
+  },
+  {
+    "code": "RHT",
+    "title": "Reduction in healing time",
+    "description": "How does this service wound healing time duration compared to conventional dressings?",
+    "project": "6GPATH"
+  },
+  {
+    "code": "EHP",
+    "title": "Empowerment of Healthcare Providers",
+    "description": "How does this service contribute to enhanced job satisfaction and professional growth opportunities for nurses and other healthcare providers with advanced tools and remote support?",
+    "project": "6GPATH"
+  },
+  {
+    "code": "RHD",
+    "title": "Resilience in Healthcare Delivery",
+    "description": "How does this service contribute to the continuity of care during emergencies or natural disasters, improving community resilience?",
+    "project": "6GPATH"
+  },
+  {
+    "code": "IOESL",
+    "title": "Increased operational efficiency in saving lives in remote areas",
+    "description": "The AR/VR demo UC of the project could be extended to rescue operations.",
+    "project": "DESIRE6G"
+  },
+  {
+    "code": "RIHW",
+    "title": "Reduced injuries in the human workforce",
+    "description": "The Robotic Digital Twin UC and the Robot Control UC highlight the potential increase in the use of robots if xURLLC services are supported.",
+    "project": "DESIRE6G"
+  },
+  {
+    "code": "WRIWB",
+    "title": "Number/Severity of work-related injuries and Indicators of workers' well-being",
+    "description": "6G network would enable the integration of occupational exoskeletons to reduce physical load, improve quality of work, and potentially decrease the number/severity of work-related injuries.",
+    "project": "DETERMINISTIC6G"
+  },
+  {
+    "code": "NRDPF",
+    "title": "Number of required devices/production facilities",
+    "description": "Adaptive production lines allow to produce different types of products on the same production system. This reduces the need for materials by reusing the same processing modules for multiple production lines.",
+    "project": "DETERMINISTIC6G"
+  },
+  {
+    "code": "NKWA",
+    "title": "Number of killed wild animals",
+    "description": "Automated wildlife detection via drones flying ahead of a harvesting machine may prevent wild animals to be killed.",
+    "project": "DETERMINISTIC6G"
+  },
+  {
+    "code": "BURH",
+    "title": "Safe activities via realistic holo-portation",
+    "description": "Costs and risks minimization, increased user confidence, and hands-on safety collaboration by avoiding risky situations in terms of machinery manipulation or dangerous environments.",
+    "project": "6GXR"
+  },
+  {
+    "code": "ATUT",
+    "title": "The ability to use tools while keeping a focus on the final goals",
+    "description": "The ability to make the decisions at difficult times requires that users do not have to focus on their work with the tools but instead they are able to use the tools to support the vulnerable people they are seeking to protect.",
+    "project": "FIDAL"
+  },
+  {
+    "code": "CFS",
+    "title": "Citizens Feeling safe",
+    "description": "Stakeholder perception of personal and community safety resulting from solution use.",
+    "project": "FIDAL"
+  },
+  {
+    "code": "GPC",
+    "title": "Greater protection of citizens by better understanding hazards",
+    "description": "Information needs to be the right kind for the right person for the right kind of assessment in order for a public safety practitioner to be able to do their jobs. Improved awareness of vulnerabilities and risks faced by citizens.",
+    "project": "FIDAL"
+  },
+  {
+    "code": "IPAA",
+    "title": "Improve practitioners' ability to perform and make necessary decisions",
+    "description": "Tools need to be usable in both training exercises and day-to-day activities by public safety organisations to be valuable. Trainings with the system are able to be aligned with organisational objectives and goals.",
+    "project": "FIDAL"
+  },
+  {
+    "code": "SMSN",
+    "title": "Security matches sensitive nature of user and data",
+    "description": "The ability for a system to work in ways that support the unique security needs of mission critical work. Confidentiality of sensitive information.",
+    "project": "FIDAL"
+  },
+  {
+    "code": "ARR",
+    "title": "Accident Rate Reduction",
+    "description": "Assesses the effectiveness of ENVELOPE solutions in preventing accidents.",
+    "project": "ENVELOPE"
+  },
+  {
+    "code": "ICSA",
+    "title": "Increase of communication services availability",
+    "description": "Decrease in communication outages in emergency/disastrous situations (Fast response and mitigation of disastrous situations).",
+    "project": "ECO-eNET"
+  },
+  {
+    "code": "FREI",
+    "title": "Faster response in environmental or man-caused incidents",
+    "description": "Faster response in incidents especially affecting large areas (Fast response and mitigation of disastrous situations).",
+    "project": "ECO-eNET"
+  },
+  {
+    "code": "INIM",
+    "title": "Increase in the number of incidents mitigated",
+    "description": "Mitigation thanks to the availability of communication services/PPDR advanced services.",
+    "project": "ECO-eNET"
+  },
+  {
+    "code": "IUT",
+    "title": "Injuries in urban traffic",
+    "description": "Joint communication and sensing; Multi-agent supporting network architecture (evaluated through connected LiDAR, connected radar, and AI-assisted energy efficiency).",
+    "project": "6G-EWOC"
+  },
+  {
+    "code": "LoT",
+    "title": "Level of Trustworthiness",
+    "description": "Level of trustworthiness provided to a user is the result of combined actions taken by the cognitive AI coordinator of the 6G system simultaneously at the application plane, core network plane, and resource/cloud continuum plane. It involves deploying Trust Functions to apply security, privacy, safety, resilience, and reliability actions satisfying the user's intent.",
+    "project": "SAFE-6G"
+  },
+  {
+    "code": "RC",
+    "title": "Reported confidence in the digital devices, systems, and services used in the use-case development and operation.",
+    "description": "% of the users expressing positive evaluation regarding the robustness of the devices, the trustworthiness of the used AI algorithms, and the E2E privacy of the system.",
+    "project": "TrialsNet"
+  },
+  {
+    "code": "LoT",
+    "title": "Level of Trustworthiness",
+    "description": "Trustworthiness encompasses multiple facets, such as security, privacy, availability, resilience, and compliance with ethical frameworks. It is calculated as a combination of several metrics (e.g., Attestation level, Traffic path attestation, Traceability, Security issues) into a Level of Trust (LoT) concept.",
+    "project": "PRIVATEER"
+  },
+  {
+    "code": "FRV",
+    "title": "Facial relief visualization of the people we are interacting with helps in the enhancement of the inter-personal relations. Then, it increases the level of thrustless, cooperation, and understanding.",
+    "description": "Holographic meeting, Smart devices SDK to measure the trust level of the people you are interacting with.",
+    "project": "6GXR"
+  },
+  {
+    "code": "UT",
+    "title": "Users trust a system's behaviour, process, and governance; Users trust fellow users; Users trust infrastructures and networks.",
+    "description": "Building systems that continue to be trusted by users and society. Building an understanding of how one element of a trusted system, dependability, works in different domains and activities might relate to different technical features. Stakeholders deem the system dependable for their activities.",
+    "project": "FIDAL"
+  },
+  {
+    "code": "APSS",
+    "title": "Able to perform the session successfully, no matter their location",
+    "description": "Able to perform the session successfully, no matter their location. User has tolerance of disconnection or gaps in service in how they use it.",
+    "project": "FIDAL"
+  }
 ]

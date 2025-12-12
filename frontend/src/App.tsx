@@ -1,6 +1,11 @@
 import { useState, useRef, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowUp } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import rehypeRaw from 'rehype-raw';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import llmLogo from './assets/images/llm.png';
 
 const images = import.meta.glob('./assets/images/services/*.png', { eager: true, import: 'default' });
@@ -151,6 +156,10 @@ function App() {
 
   useEffect(() => {
     scrollToBottom();
+    console.log(`[MESSAGES STATE] Total messages: ${messages.length}`);
+    messages.forEach((msg, idx) => {
+      console.log(`[MSG ${idx}] ID: ${msg.id}, Sender: ${msg.sender}, Length: ${msg.text.length}, First 50 chars: ${msg.text.substring(0, 50)}`);
+    });
   }, [messages]);
 
   const handleSendMessage = async () => {
@@ -168,9 +177,15 @@ function App() {
     setHasStarted(true);
     setIsTyping(true);
 
+    // Track accumulated response for the complete turn
+    const aiMsgId = (Date.now() + 1).toString();
+    let completeResponse = '';
+    let currentAgentContent = '';
+    let aiMessageAdded = false;
+
     try {
-      // Call the backend API
-      const response = await fetch(`${BACKEND_URL}/api/chat`, {
+      // Use fetch with POST to initiate the SSE stream
+      const response = await fetch(`${BACKEND_URL}/api/chat/stream`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -185,29 +200,179 @@ function App() {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
 
-      const data = await response.json();
+      // Read the SSE stream
+      const reader = response.body?.getReader();
+      const decoder = new TextDecoder();
 
-      // Update session ID if this is the first message
-      if (!sessionId && data.session_id) {
-        setSessionId(data.session_id);
+      if (!reader) {
+        throw new Error('No response body reader available');
       }
 
-      // Add AI response
-      const aiMsg: Message = {
-        id: (Date.now() + 1).toString(),
-        text: data.reply,
-        sender: 'ai',
-      };
-      setMessages((prev) => [...prev, aiMsg]);
-      setIsTyping(false);
+      while (true) {
+        const { done, value } = await reader.read();
+
+        if (done) {
+          setIsTyping(false);
+          break;
+        }
+
+        // Decode the chunk and process SSE events
+        const chunk = decoder.decode(value, { stream: true });
+        const lines = chunk.split('\n');
+
+        for (const line of lines) {
+          if (line.startsWith('data: ')) {
+            try {
+              const eventData = JSON.parse(line.slice(6));
+
+              switch (eventData.type) {
+                case 'connected':
+                  // Update session ID if this is the first message
+                  if (!sessionId && eventData.session_id) {
+                    setSessionId(eventData.session_id);
+                  }
+                  break;
+
+                case 'status':
+                  // Show status indicator (e.g., "Processing with inspector...")
+                  console.log('Status:', eventData.message);
+                  // Keep showing typing indicator during status updates
+                  setIsTyping(true);
+                  break;
+
+                case 'content':
+                  // Accumulate content but don't display yet
+                  currentAgentContent += eventData.delta;
+                  console.log(`[CONTENT] Accumulated ${currentAgentContent.length} chars, NOT displaying yet`);
+                  break;
+
+                case 'agent_complete':
+                  // Agent finished - now display the complete response
+                  console.log(`[AGENT_COMPLETE] Agent ${eventData.agent} completed with ${currentAgentContent.length} chars`);
+                  console.log(`[AGENT_COMPLETE] Will display full response now`);
+                  completeResponse += currentAgentContent;
+                  console.log(`[AGENT_COMPLETE] completeResponse now has ${completeResponse.length} chars`);
+                  console.log(`[AGENT_COMPLETE] First 100 chars: ${completeResponse.substring(0, 100)}`);
+
+                  if (!aiMessageAdded) {
+                    // Add the AI message for the first time with complete agent response
+                    console.log(`[AGENT_COMPLETE] Adding NEW message with ID ${aiMsgId}`);
+                    setMessages((prev) => [...prev, {
+                      id: aiMsgId,
+                      text: completeResponse,
+                      sender: 'ai',
+                    }]);
+                    aiMessageAdded = true;
+                  } else {
+                    // Update existing AI message with accumulated content
+                    console.log(`[AGENT_COMPLETE] Updating EXISTING message with ID ${aiMsgId}`);
+                    setMessages((prev) =>
+                      prev.map(m =>
+                        m.id === aiMsgId
+                          ? { ...m, text: completeResponse }
+                          : m
+                      )
+                    );
+                  }
+
+                  // Reset for next agent
+                  currentAgentContent = '';
+                  break;
+
+                case 'transition':
+                  // Agent transition - add transition message to display
+                  console.log(`Transitioning from ${eventData.from_agent} to ${eventData.to_agent}`);
+                  if (eventData.message) {
+                    completeResponse += eventData.message;
+
+                    if (!aiMessageAdded) {
+                      setMessages((prev) => [...prev, {
+                        id: aiMsgId,
+                        text: completeResponse,
+                        sender: 'ai',
+                      }]);
+                      aiMessageAdded = true;
+                    } else {
+                      setMessages((prev) =>
+                        prev.map(m =>
+                          m.id === aiMsgId
+                            ? { ...m, text: completeResponse }
+                            : m
+                        )
+                      );
+                    }
+                  }
+                  break;
+
+                case 'complete':
+                  // Final completion - display any remaining content
+                  console.log('Processing complete');
+                  if (currentAgentContent) {
+                    completeResponse += currentAgentContent;
+
+                    if (!aiMessageAdded) {
+                      setMessages((prev) => [...prev, {
+                        id: aiMsgId,
+                        text: completeResponse,
+                        sender: 'ai',
+                      }]);
+                      aiMessageAdded = true;
+                    } else {
+                      setMessages((prev) =>
+                        prev.map(m =>
+                          m.id === aiMsgId
+                            ? { ...m, text: completeResponse }
+                            : m
+                        )
+                      );
+                    }
+                  }
+                  setIsTyping(false);
+                  break;
+
+                case 'done':
+                  // Stream finished
+                  setIsTyping(false);
+                  break;
+
+                case 'error':
+                  console.error('Server error:', eventData.message);
+                  if (!aiMessageAdded) {
+                    setMessages((prev) => [...prev, {
+                      id: aiMsgId,
+                      text: eventData.message || 'An error occurred during processing.',
+                      sender: 'ai',
+                    }]);
+                  }
+                  setIsTyping(false);
+                  break;
+              }
+            } catch (parseError) {
+              console.error('Error parsing SSE event:', parseError, 'Line:', line);
+            }
+          }
+        }
+      }
+
     } catch (error) {
-      console.error('Error calling backend:', error);
+      console.error('Error with streaming:', error);
       const errorMsg: Message = {
-        id: (Date.now() + 1).toString(),
+        id: aiMsgId,
         text: "Sorry, I encountered an error connecting to the backend. Please check the console for details.",
         sender: 'ai',
       };
-      setMessages((prev) => [...prev, errorMsg]);
+
+      if (!aiMessageAdded) {
+        setMessages((prev) => [...prev, errorMsg]);
+      } else {
+        setMessages((prev) =>
+          prev.map(m =>
+            m.id === aiMsgId
+              ? errorMsg
+              : m
+          )
+        );
+      }
       setIsTyping(false);
     }
   };
@@ -248,7 +413,7 @@ function App() {
               exit={{ opacity: 0 }}
               className="absolute inset-0 flex flex-col justify-between overflow-hidden"
             >
-              <div className="flex-1 overflow-y-auto w-full max-w-3xl mx-auto p-4 pt-20 pb-40 scrollbar-hide">
+              <div className="flex-1 overflow-y-auto w-[90%] mx-auto p-4 pt-20 pb-40 scrollbar-hide">
                 {messages.map((msg) => (
                   <div key={msg.id} className={`mb-6 flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
                     <div className={`flex gap-4 max-w-[80%] ${msg.sender === 'user' ? 'flex-row-reverse' : 'flex-row'}`}>
@@ -267,7 +432,61 @@ function App() {
                           )}
                       </div>
                       <div className={`p-3 rounded-2xl ${msg.sender === 'user' ? 'bg-[#2f2f2f] text-white' : 'text-gray-100'}`}>
-                        <p className="leading-relaxed whitespace-pre-wrap">{msg.text}</p>
+                        <div className="leading-relaxed prose prose-invert max-w-none">
+                          <ReactMarkdown
+                            remarkPlugins={[remarkGfm]}
+                            rehypePlugins={[rehypeRaw]}
+                            components={{
+                              code({ node, inline, className, children, ...props }: any) {
+                                const match = /language-(\w+)/.exec(className || '');
+                                return !inline && match ? (
+                                  <SyntaxHighlighter
+                                    style={vscDarkPlus}
+                                    language={match[1]}
+                                    PreTag="div"
+                                    {...props}
+                                  >
+                                    {String(children).replace(/\n$/, '')}
+                                  </SyntaxHighlighter>
+                                ) : (
+                                  <code className={`${className} bg-gray-700 px-1 py-0.5 rounded text-sm`} {...props}>
+                                    {children}
+                                  </code>
+                                );
+                              },
+                              p: ({ children }) => <p className="mb-2 last:mb-0">{children}</p>,
+                              ul: ({ children }) => <ul className="list-disc list-inside mb-2">{children}</ul>,
+                              ol: ({ children }) => <ol className="list-decimal list-inside mb-2">{children}</ol>,
+                              li: ({ children }) => <li className="mb-1">{children}</li>,
+                              h1: ({ children }) => <h1 className="text-2xl font-bold mb-2 mt-4">{children}</h1>,
+                              h2: ({ children }) => <h2 className="text-xl font-bold mb-2 mt-3">{children}</h2>,
+                              h3: ({ children }) => <h3 className="text-lg font-bold mb-2 mt-2">{children}</h3>,
+                              a: ({ children, href }) => (
+                                <a href={href} className="text-blue-400 hover:text-blue-300 underline" target="_blank" rel="noopener noreferrer">
+                                  {children}
+                                </a>
+                              ),
+                              blockquote: ({ children }) => (
+                                <blockquote className="border-l-4 border-gray-500 pl-4 italic my-2">
+                                  {children}
+                                </blockquote>
+                              ),
+                              table: ({ children }) => (
+                                <div className="overflow-x-auto my-2">
+                                  <table className="min-w-full border border-gray-600">{children}</table>
+                                </div>
+                              ),
+                              th: ({ children }) => (
+                                <th className="border border-gray-600 px-4 py-2 bg-gray-700">{children}</th>
+                              ),
+                              td: ({ children }) => (
+                                <td className="border border-gray-600 px-4 py-2">{children}</td>
+                              ),
+                            }}
+                          >
+                            {msg.text}
+                          </ReactMarkdown>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -394,7 +613,7 @@ function App() {
         <div className="absolute bottom-0 left-0 right-0 w-full p-4 bg-gradient-to-t from-[#212121] via-[#212121] to-transparent pt-8">
           <motion.div
             layoutId="input-container"
-            className={`relative mx-auto bg-[#2f2f2f] rounded-3xl border border-gray-600 shadow-lg overflow-hidden ${hasStarted ? 'max-w-3xl' : 'max-w-2xl'}`}
+            className={`relative mx-auto bg-[#2f2f2f] rounded-3xl border border-gray-600 shadow-lg overflow-hidden ${hasStarted ? 'w-[90%]' : 'max-w-2xl'}`}
             transition={{ type: "spring", bounce: 0, duration: 0.6 }}
           >
             <textarea

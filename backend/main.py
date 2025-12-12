@@ -1,15 +1,17 @@
+import json
 import time
-from typing import Any, Dict
+from typing import Any, AsyncGenerator, Dict
 
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import StreamingResponse
 
 from .agent_registry import AgentRegistry
 from .chat_orchestrator import ChatOrchestrator
 from .config import get_settings
 from .logging_config import setup_logging
 from .schemas import ChatRequest, ChatResponse
-from .session import SessionStore
+from .session import ChatMessage, SessionStore
 
 settings = get_settings()
 logger = setup_logging(settings.log_level)
@@ -63,52 +65,6 @@ async def healthcheck() -> Dict[str, str]:
     return {"status": "ok", "service": "kpi2kvi-backend"}
 
 
-@app.post("/api/chat", response_model=ChatResponse)
-async def chat(request: ChatRequest) -> ChatResponse:
-    """Chat endpoint that keeps session context and forwards to the multi-agent LLM pipeline."""
-
-    try:
-        # Get starting agent from orchestrator (only used for new sessions)
-        starting_agent = chat_orchestrator.get_starting_agent()
-        session = await session_store.get_or_create(request.session_id, starting_agent=starting_agent)
-        
-        # Get session-specific logger
-        session_logger = session_store.get_session_logger(session.session_id)
-        
-        # Process message through chat orchestrator
-        reply, history, new_agent_name = await chat_orchestrator.process_message(
-            request.message,
-            session.messages,
-            session.current_agent,
-            session_logger=session_logger
-        )
-        
-        # Update session with new history and agent name
-        await session_store.replace_history(session.session_id, history)
-        
-        # Update the current agent in the session
-        async with session_store.lock:
-            if session.session_id in session_store.sessions:
-                session_store.sessions[session.session_id].current_agent = new_agent_name
-
-        logger.info(
-            "Chat turn complete",
-            extra={
-                "session_id": session.session_id,
-                "history_len": len(history),
-                "agent_name": new_agent_name,
-            },
-        )
-        
-        if session_logger:
-            session_logger.info(f"Chat turn complete - Total messages: {len(history)}, Current agent: {new_agent_name}")
-        
-        return ChatResponse(session_id=session.session_id, reply=reply, history=history)
-    except Exception as exc:  # pragma: no cover - defensive
-        logger.exception("Chat request failed")
-        raise HTTPException(status_code=500, detail="LLM request failed") from exc
-
-
 @app.get("/api/agents")
 async def get_agents() -> Dict[str, Any]:
     """Get information about all available agents."""
@@ -143,6 +99,87 @@ async def get_current_agent(session_id: str) -> Dict[str, Any]:
     except Exception as exc:
         logger.exception("Failed to get agent status")
         raise HTTPException(status_code=500, detail="Failed to get agent status") from exc
+
+
+@app.post("/api/chat/stream")
+async def chat_stream(request: ChatRequest):
+    """Streaming chat endpoint that sends real-time updates via Server-Sent Events."""
+    
+    async def event_generator() -> AsyncGenerator[str, None]:
+        try:
+            # Get starting agent from orchestrator (only used for new sessions)
+            starting_agent = chat_orchestrator.get_starting_agent()
+            session = await session_store.get_or_create(request.session_id, starting_agent=starting_agent)
+            
+            # Get session-specific logger
+            session_logger = session_store.get_session_logger(session.session_id)
+            
+            # Send initial connection event with session ID
+            yield f"data: {json.dumps({'type': 'connected', 'session_id': session.session_id, 'agent': session.current_agent})}\n\n"
+            
+            # Track the complete response and history for final update
+            final_response = ""
+            final_history = None
+            final_agent = session.current_agent
+            
+            # Process message through chat orchestrator with streaming
+            async for event in chat_orchestrator.process_message_stream(
+                request.message,
+                session.messages,
+                session.current_agent,
+                session_logger=session_logger
+            ):
+                # Forward all events to client
+                yield f"data: {json.dumps(event)}\n\n"
+                
+                # Track final state
+                if event.get('type') == 'complete':
+                    final_response = event.get('final_response', '')
+                    final_history = event.get('history', [])
+                    final_agent = event.get('current_agent', session.current_agent)
+            
+            # Update session with new history and agent
+            if final_history is not None:
+                # Convert dict back to ChatMessage objects
+                history_objects = [ChatMessage(**msg) for msg in final_history]
+                await session_store.replace_history(session.session_id, history_objects)
+                
+                # Update the current agent in the session
+                async with session_store.lock:
+                    if session.session_id in session_store.sessions:
+                        session_store.sessions[session.session_id].current_agent = final_agent
+            
+            logger.info(
+                "Streaming chat turn complete",
+                extra={
+                    "session_id": session.session_id,
+                    "history_len": len(final_history) if final_history else 0,
+                    "agent_name": final_agent,
+                },
+            )
+            
+            if session_logger:
+                session_logger.info(
+                    f"Streaming chat turn complete - Total messages: {len(final_history) if final_history else 0}, "
+                    f"Current agent: {final_agent}"
+                )
+            
+            # Send final done event
+            yield f"data: {json.dumps({'type': 'done'})}\n\n"
+            
+        except Exception as exc:
+            logger.exception("Streaming chat request failed")
+            yield f"data: {json.dumps({'type': 'error', 'message': 'Processing failed. Please try again.'})}\n\n"
+    
+    return StreamingResponse(
+        event_generator(),
+        media_type="text/event-stream",
+        headers={
+            "Cache-Control": "no-cache",
+            "Connection": "keep-alive",
+            "X-Accel-Buffering": "no",  # Disable buffering for nginx
+        }
+    )
 
 
 @app.get("/")

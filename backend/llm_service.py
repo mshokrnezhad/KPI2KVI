@@ -60,6 +60,7 @@ class LLMAgent:
             # Plain text output is also in result.data
             return str(result.data)
 
+
     @property
     def name(self) -> str:
         """Get the agent's name."""
